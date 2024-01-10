@@ -1,6 +1,12 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <div class="container">
+    <div class="row">
+
+      <h2 class="display-2">Home</h2>
+    </div>
+    <div class="row" >
+      <p class="lead">{{ jobTitle }}</p>
+    </div>
   </div>
 </template>
 
@@ -10,8 +16,6 @@
 
 export default {
 
-  name: 'HomeView',
-  components: {
   }
 }
 </script>
