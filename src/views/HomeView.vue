@@ -5,7 +5,7 @@
       <h2 class="display-2">Home</h2>
     </div>
     <div class="row" >
-      <p class="lead">{{ jobTitle }}</p>
+      <p class="lead"></p>
     </div>
   </div>
 </template>
@@ -17,5 +17,5 @@
 export default {
 
   }
-}
+
 </script>
