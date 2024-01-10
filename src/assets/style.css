@@ -16,7 +16,7 @@
   
   nav {
     padding: 30px;
-    justify-content: center;
+    justify-self: center;
   }
   
   nav a {
@@ -28,3 +28,8 @@
     color: #42b983;
 
   }
+  .formation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
