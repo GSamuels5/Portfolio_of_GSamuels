@@ -13,7 +13,7 @@
 
 <script>
     export default {
-        name:'FooterComp',
+        name:'footerComp',
         data(){
             return{
 
