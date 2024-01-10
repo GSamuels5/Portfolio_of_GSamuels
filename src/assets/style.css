@@ -26,10 +26,5 @@
   
   nav a.router-link-exact-active {
     color: #42b983;
-  }
-  /* headings */
-  .display-2{
-    justify-content: center;
-    align-items: center;
-    text-decoration: underline;
+
   }

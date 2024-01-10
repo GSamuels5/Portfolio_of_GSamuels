@@ -1,11 +1,6 @@
 <template>
     <div>
-        <div class="container">
-    <div class="row">
 
-      <h2 class="display-2">Projects</h2>
-    </div>
-  </div>
     </div>
 </template>
 
@@ -15,6 +10,6 @@
     }
 </script>
 
-<style scoped>
+
 
 </style>

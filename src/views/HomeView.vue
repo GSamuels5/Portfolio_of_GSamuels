@@ -15,13 +15,7 @@
 
 
 export default {
-  computed: {
-    jobTitle(){
-      return this.$store.state.jobTitle
-    }
-  },
-  mounted(){
-    this.$store.dispatch('fetchJobTitle')
+
   }
 }
 </script>

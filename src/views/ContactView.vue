@@ -1,17 +1,12 @@
 <template>
     <div>
-        <div class="container">
-    <div class="row">
 
-      <h2 class="display-2">Contact</h2>
-    </div>
-  </div>
     </div>
 </template>
 
 <script>
     export default {
-        
+
     }
 </script>
 
