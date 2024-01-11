@@ -33,3 +33,90 @@
     flex-direction: column;
     align-items: flex-start;
 }
+.log{
+  border: 1px solid black;
+  background-color: rgb(27, 187, 27);
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25% 25% 0 0;
+  margin-bottom: 40px;
+}
+/* image */
+.picture{
+  width: 300px;
+  border-radius: 15% 15% 26% 26%;
+animation: fadePic 2s ease-in;
+}
+@keyframes fadePic {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* navbar */
+.nav-link:hover{
+background-color: rgb(27, 187, 27);
+}
+.log {
+  border: 1px solid black;
+  background-color: rgb(27, 187, 27);
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25% 25% 0 0;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-100px);
+  animation: slideIn 2s forwards, fallIn 4s 4s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.log h2 {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.log span {
+  display: block;
+  font-size: 0.8em;
+  color: white;
+}
+/* about */
+.display-2{
+  text-decoration: underline;
+}
+/* resume */
+.eduCard{
+  text-align: justify;
+  text-wrap: wrap;
+}
+.data{
+  margin-left: 10px;
+}
