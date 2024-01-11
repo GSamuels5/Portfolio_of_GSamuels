@@ -1,6 +1,6 @@
 <template>
     
-    <div class="container-fluid bg-success fixed-bottom">
+    <div class="container-fluid bg-success ">
         <div class="row">
             <p class="lead"> Portfolio of Ghamzah Samuels 
                 &copy;

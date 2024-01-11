@@ -6,41 +6,52 @@
      <div class="container">
    
 
-<h3>Education</h3>
-<div class="education d-flex flex-sm-wrap w-75" v-if="displayEducation">
+<h2>Education</h2>
+<div class="education d-flex mx-2 flex-sm-wrap w-100 my-3" v-if="displayEducation">
   <div v-for="edu in displayEducation" :key="edu.id" >
-    <div class="card border-secondary mb-3" style="max-width: 20rem;">
-      <div class="card-header">{{ edu.institution }}</div>
-      <div class="card-body text-secondary">
-        <h5 class="card-title">Name:{{ edu.description }}</h5>
-        <h5 class="card-title">Year:{{ edu.year }}</h5>
-        <h5 class="card-title">Certificate:{{ edu.type }}</h5>
-        
-      </div>
-    </div>
-       
-      </div>
-
-
-          </div>
-          <h3>Skills</h3>
-<div class="education d-flex flex-sm-wrap w-75" v-if="displaySkills">
-  <div v-for="skill in displaySkills" :key="skill.id" >
-    <div class="card border-secondary mb-3" style="max-width: 20rem;">
-      <div class="card-header">{{ skill.title }}</div>
-      <div class="card-body text-secondary">
-        <h5 class="card-title">Name:{{ skill.experience }}</h5>
- 
-        
-      </div>
-    </div>
-       
-      </div>
-
-
-          </div>
+    <div id='fullCard' class="card border-secondary mb-1 mx-0 g-0 " style="max-width: 30rem;">
+      <div class="card-header"><h4>{{ edu.institution }}</h4></div>
+      <div class="eduCard card-body">
+        <h5 class="card-title ">Name:<span class="data">{{ edu.description }}
+        </span>
+      </h5>
           
+        <h5 class="card-title">Year:<span class="data">{{ edu.year }}</span></h5>
+        <h5 class="card-title">Certificate:{{ edu.type }} </h5>
+        
+      </div>
+    </div>
+       
+      </div>
+
+
+          </div>
+    
+          <h3>Skills</h3>
+            <div class="education flex-sm-wrap w-100" v-if="displaySkills">
+              <div v-for="skill in displaySkills" :key="skill.id" >
+        <div class="card mb-3" style="max-width: 500px;">
+  <div class="row g-0">
+    <div class="col-md-4 border-black">
+      <img :src="skill.image" class="img-fluid rounded-start" alt="image">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ skill.title }}</h5>
+        <p class="card-text">{{skill.experience}}</p>
+      </div>
+    </div>
   </div>
+</div>
+      </div>
+    </div>
+       
+
+
+     </div>
+          
+          
+
 
 </template>
 
