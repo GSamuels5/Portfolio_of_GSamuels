@@ -29,7 +29,7 @@
 
           <button ><span>gitHub</span></button>
         </a>
-        <a :href="pros.netlify" target="_blank">
+        <a :href="pros.vercel" target="_blank">
 
 <button ><span>Website</span></button>
 </a>
