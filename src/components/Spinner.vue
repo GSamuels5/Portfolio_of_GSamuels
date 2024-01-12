@@ -8,9 +8,19 @@
     </div>
 </template>
 
-<script>
+<script scoped>
     export default {
         name: 'spinnerComp',
+    //     data(){
+    //         return{
+    //             showSpinner: true,
+    //         }
+    //     },
+    //     mounted(){
+
+    //         
+
+    //     }
         
     }
 </script>

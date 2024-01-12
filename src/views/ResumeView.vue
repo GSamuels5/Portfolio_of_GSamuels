@@ -28,7 +28,7 @@
           </div>
     
           <h3>Skills</h3>
-            <div class="education flex-sm-wrap w-100" v-if="displaySkills">
+            <div class="education flex-sm-wrap justify-content-start w-100" v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" >
         <div class="card mb-3" style="max-width: 500px;">
   <div class="row g-0">
