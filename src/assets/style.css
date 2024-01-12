@@ -13,11 +13,17 @@
     text-align: center;
     color: #2c3e50;
   }
-  
+  .navbar{
+    justify-content: end;
+    background-color: grey;
+  }
   nav {
     padding: 30px;
     justify-self: center;
+    font-size: 20px;
+
   }
+
   
   nav a {
     font-weight: bold;
@@ -32,6 +38,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+}
+body{
+  background-color: rgb(49, 176, 176);
 }
 .log{
   border: 1px solid black;
@@ -41,6 +51,11 @@
   margin-right: auto;
   border-radius: 25% 25% 0 0;
   margin-bottom: 40px;
+}
+/* footer */
+.feet{
+  margin-bottom: 0;
+  background-color: grey;
 }
 /* image */
 .picture{
@@ -108,6 +123,13 @@ background-color: rgb(27, 187, 27);
   font-size: 0.8em;
   color: white;
 }
+/* home */
+.floating{
+  margin-bottom:0 ;
+}
+.picture{
+  height: 330px;
+}
 /* about */
 .display-2{
   text-decoration: underline;
@@ -138,4 +160,12 @@ font-weight: bold;
 .card img{
   width: 100%;
   height: auto;
+}
+.card-body {
+  flex-grow: 1
+}
+.card-title,
+h6,
+.card-text{
+  margin-bottom: 0;
 }
