@@ -7,9 +7,9 @@
    
 
 <h2>Education</h2>
-<div class="education d-flex mx-2 flex-sm-wrap w-100 my-3" v-if="displayEducation">
+<div class="education d-flex mx-2  w-100  my-3" v-if="displayEducation">
   <div v-for="edu in displayEducation" :key="edu.id" >
-    <div id='fullCard' class="card border-secondary mb-1 mx-0 g-0 " style="max-width: 30rem;">
+    <div id='fullCard' class="card border-secondary mb-1 mx-2 g-0 " >
       <div class="card-header"><h4>{{ edu.institution }}</h4></div>
       <div class="eduCard card-body">
         <h5 class="card-title ">Name:<span class="data">{{ edu.description }}
@@ -28,9 +28,9 @@
           </div>
     
           <h3>Skills</h3>
-            <div class="education flex-sm-wrap justify-content-start w-100" v-if="displaySkills">
+            <div class="education d-inline justify-content-start w-100" v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" >
-        <div class="card mb-3" style="max-width: 500px;">
+        <div class="card mb-3 " style="max-width: 500px;">
   <div class="row g-0">
     <div class="col-md-4 border-black">
       <img :src="skill.image" class="img-fluid rounded-start" alt="image">
@@ -76,5 +76,14 @@ this.$store.dispatch('fetchSkills')
 </script>
 
 <style scoped>
+@media screen and (min-width: 300px) and (max-width: 900px) {
+  .education .card{
+    grid-auto-columns: min-content;
+    margin-right: auto;
+  flex: 0 0 100%;
+  margin-bottom: 10px;
+
+  }
+}
 
 </style>

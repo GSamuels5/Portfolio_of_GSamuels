@@ -31,3 +31,18 @@ export default {
   }
 
 </script>
+<style scoped>
+@media screen and (min-width: 300px) and (max-width: 900px) {
+.log{
+  width: auto;
+  font-size: smaller;
+}
+.floating{
+  align-self: auto;
+
+}
+.picture{
+  width: auto;
+}
+}
+</style>

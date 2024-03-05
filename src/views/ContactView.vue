@@ -1,31 +1,31 @@
 <template>
-  <div class="container vh-100">
+  <div class="container ">
 
 
     <div class="row">
   
       <h2 class="display-2 mb-2">Contact</h2>
     </div>
-     <div class="container d-flex d-sm-wra">
-      <div class="formation m-3">
-          <form action="https://formspree.io/f/xbjnljop" method="post">
-              <div class="forming row cols-3">
+  
+      <div class="formation align-content-sm-center  bg-danger">
+          <form action="https://formspree.io/f/mbjnykkk" method="post">
+              <div class="forming row col">
                   <label for="firtname">First name:</label>
                   <input type="text" id="firtname" placeholder="enter your name" required >
               </div>
-              <div class="forming row cols-3" >
+              <div class="forming row col" >
                   <label  for="surname">Surname:</label>
                   <input type="text" id="lastname" placeholder="enter your surname" required  >
               </div>
-              <div class="forming row cols-3">
+              <div class="forming row col">
                   <label for="emailAdd">Email:</label>
                   <input type="email" placeholder="enter your Email Address" required id="emailAdd" name="emailAdd">
               </div>
-              <div class="forming row cols-3">
+              <div class="forming row col">
                   <label for="message">Message</label>
                   <textarea name="message" id="message" placeholder="Please enter your message" cols="20" rows="7" required ></textarea>
                 </div>
-              <div class="forming row cols-3">
+              <div class="forming row col">
                   <button type="submit">Submit</button>
               </div>
           </form>
@@ -57,7 +57,7 @@
             14 Stone Court Lavender Hill Retreat 7945 <i class="bi bi-geo-alt-fill"></i></h5>
         </div>
     </div>
-  </div>
+  
 </template>
 
 <script>
@@ -67,5 +67,8 @@
 </script>
 
 <style scoped>
-
+.formation{
+  flex-wrap: wrap;
+  width: 20.8rem;
+}
 </style>
