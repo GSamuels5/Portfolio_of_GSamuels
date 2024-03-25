@@ -7,19 +7,20 @@
    
 
 <h2>Education</h2>
-<div class="education d-flex mx-2  w-100  my-3" v-if="displayEducation">
-  <div v-for="edu in displayEducation" :key="edu.id" >
-    <div id='fullCard' class="card border-secondary mb-1 mx-2 g-0 " >
+<div class="educat  mx-2  w-100   my-3 mb-4" v-if="displayEducation">
+  <div v-for="edu in displayEducation" :key="edu.id" id='fullCard' class="card border-secondary h-100 m-auto d-flex ">
+  
       <div class="card-header"><h4>{{ edu.institution }}</h4></div>
-      <div class="eduCard card-body">
+      <div class="eduCard card-body ">
         <h5 class="card-title ">Name:<span class="data">{{ edu.description }}
         </span>
       </h5>
           
-        <h5 class="card-title">Year:<span class="data">{{ edu.year }}</span></h5>
+        
         <h5 class="card-title">Certificate:{{ edu.type }} </h5>
         
       </div>
+      <div class="card-footer"><h5 class="card-title">Year:<span class="data">{{ edu.year }}</span></h5></div>
     </div>
        
       </div>
@@ -28,9 +29,27 @@
           </div>
     
           <h3>Skills</h3>
-            <div class="education d-inline justify-content-start w-100" v-if="displaySkills">
+            <!-- <div class="education d-flex mx-2 justify-content-start w-100 mt-6" v-if="displaySkills">
+              <div v-for="skill in displaySkills" :key="skill.id" class="card mb-3  m-auto h-100 " >
+        
+  <div class="row  mx-0 my-auto">
+    <div class=" card-header mb-3 border-black">
+        <h5 class="card-title">{{ skill.title }}</h5>
+    </div>
+    
+      <div class="card-body ">
+      <img :src="skill.image" class="img-fluid "  id="skillImg" alt="image">
+       
+      </div>
+      <div class="card-footer h-100">
+         <p class="card-text">{{skill.experience}}</p>
+      </div>
+  </div>
+</div>
+      </div> -->
+        <div class="education my-3 d-flex w-100 d-flex  " v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" >
-        <div class="card mb-3 " style="max-width: 500px;">
+        <div class="card shadow " id="skillset">
   <div class="row g-0">
     <div class="col-md-4 border-black">
       <img :src="skill.image" class="img-fluid rounded-start" alt="image">
@@ -45,10 +64,11 @@
 </div>
       </div>
     </div>
+    
        
 
 
-     </div>
+  
           
           
 
@@ -75,8 +95,8 @@ this.$store.dispatch('fetchSkills')
 
 </script>
 
-<style scoped>
-@media screen and (min-width: 300px) and (max-width: 900px) {
+// <style scoped>
+/* @media screen and (min-width: 300px) and (max-width: 900px) {
   .education .card{
     grid-auto-columns: min-content;
     margin-right: auto;
@@ -84,6 +104,45 @@ this.$store.dispatch('fetchSkills')
   margin-bottom: 10px;
 
   }
+}
+.education{
+  display: flex;
+  margin-left: 0;
+} */
+
+@media screen and (min-width: 300px) and (max-width: 900px) {
+  .education .card {
+     /* Display two cards per row */
+    margin: 0 10px 10px 0; /* Add some margin between cards */
+  }
+}
+
+.education {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+ /* Negative margin to counteract card margins */
+  max-width: 500px;
+  margin-bottom: 20px;
+
+  
+}
+
+.card {
+  width: 100%; /* Ensure card takes full width of its container */
+  
+  
+
+  
+}
+
+.border-black {
+  border: 1px solid #000; /* Add border for demonstration */
+}
+#skillset{
+  display: flex;
+  border: #000 solid 2px ;
+  gap: 30px;
+  
 }
 
 </style>
