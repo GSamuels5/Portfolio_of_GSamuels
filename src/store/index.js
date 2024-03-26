@@ -31,6 +31,7 @@ export default createStore({
     async fetchEducation(context){
       let res = await fetch(dataUrl)
       let{education} = await res.json()
+      console.log(education);
       context.commit('setEducation',education)
     },
     async fetchSkills(context){

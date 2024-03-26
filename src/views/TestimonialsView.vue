@@ -1,56 +1,72 @@
 <template>
-  <div class="container-fluid vh-100 ">
+  <div class="container-fluid">
     <div class="row mb-4">
       <h2 class="display-2">Testimonials</h2>
     </div>
-    <!-- <div class="addition d-flex flex-sm-wrap " >
-      <div v-for="test in displayTestimonials" :key="test.id" class="col-md-4 mb-3">
-        <div class="card-container h-100">
-            <div class="card m-0 p-1 w-auto ">
-              <img :src="test.profile" class="card-img-top" alt="profile">
-              <div class="card-body">
-                <h5 class="card-title">{{ test.name }}</h5>
-                
-                <p class="card-text">{{ test.quotes }}</p>
-              </div>
-              <div class="card-footer"> 
-<h6>{{ test.position }}
-                      </h6>
-              </div>
+
+   
+<!-- 
+    <div v-if="displayTestimonials" id="carouselExampleAutoplaying" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <! Loop through testimonials to generate carousel items -->
+        <!-- <div v-for="(test, index) in displayTestimonials" :key="test.id" :class="{ 'carousel-item': true, 'active': index === 0 }">
+           
+       <div class="row">
+      <div class="col mb-5"> <img :src="test.profile" class="carousel-image d-block w-100 img-fluid rounded-5" alt="profile"></div>
+      <div class="col-lg-8 carousel-caption   bg-black rounded-5"> 
+            <h5>{{ test.name }}</h5>
+            <h6>{{ test.quotes }}</h6>
+            <h4 class="bg-white text-black"></h4>
+          </div>
+    </div>
+         
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span> -->
+      <!-- </button> -->
+    <!-- </div> --> 
+    <div  v-if="displayTestimonials" id="carouselExampleAutoplaying" class="carousel slide bg-black" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- <div v-for="(testimonial, index) in testimonials" :key="index" :class="{ 'carousel-item': true, active: index === 0 }">
+        <img :src="testimonial.profile" class="d-block w-100" alt="Testimonial">
+        <div class="carousel-caption">
+          <h5>{{ testimonial.name }}</h5>
+          <p>{{ testimonial.quotes }}</p>
+        </div>
+      </div> -->
+      <div class="card mb-3 w-100" v-for="(test, index) in displayTestimonials" :key="test.id" :class="{ 'carousel-item': true, 'active': index === 0 }">
+        <!-- {{ testimonial.quotes }} -->
+        <div class="row g-0 bg-black rounded-2">
+          <div class="we col-lg-4 bg-black my-auto">
+            <img :src="test.profile" class="carousel-image d-block w-100 img-fluid rounded-5" alt="profile">
+          </div>
+          <div class="we col-lg-8 bg-black">
+            <div class="card-body">
+              <h5 class="card-title text-white text-decoration-underline fs-3">{{ test.position }}</h5>
+              <h6>{{ test.name }}</h6>
+              <p class="card-text text-white">{{ test.quotes }}</p>
             </div>
           </div>
-  </div>
-</div>  -->
-  <div  v-if="displayTestimonials" id="carouselExampleAutoplaying" class="carousel slide mt-5" data-bs-ride="carousel">
-  <div class="carousel-inner">
-      <!-- Loop through testimonials to generate carousel items -->
-    <div v-for="(test, index) in displayTestimonials" :key="test.id" :class="{ 'carousel-item': true, 'active': index === 0 }">
-      <img :src="test.profile" class="d-block w-100" alt="profile">
-      <div class="carousel-caption mb-2 d-md-block">
-        
-       
-        <h5>{{ test.name }}</h5>
-        <h6>{{ test.quotes }}</h6>
+        </div>
       </div>
-      <div class="carousel-body g-2">
-         <h4>{{ test.position }}</h4>
-  
-      </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span> 
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-      </div>
-    
 
-
+  </div>
 </template>
 
 <script>
@@ -94,23 +110,20 @@ h6,
   margin-bottom: 0;
 }
 
-@media (min-width: 300px) and (max-width: 900px) {
-  .addition {
-    font-size: smaller;
-    flex-direction: column;
-  }
+.carousel-image {
+  height: 350px; /* Set a fixed height */
+  width: auto; /* Automatically adjust the width to maintain aspect ratio */
+}
 
-  .addition .col-md-4 {
-    flex: 0 0 calc(50% - 20px); /* Display two testimonials per row */
-    max-width: calc(50% - 20px);
-    margin-right: 20px;
-    margin-bottom: 20px; /* Add some bottom margin for spacing */
-  }
+.carousel-caption {
 
-  .addition .col-md-4:last-child {
-    margin-right: 0;
-  }
+  text-align: center;
+  color: white;
+}
+
+@media screen and (min-width: 300px) and (max-width: 900px) {
+.carousel-{
+  display: none;
+}
 }
 </style>
-
- 
