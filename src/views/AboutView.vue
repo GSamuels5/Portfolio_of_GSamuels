@@ -6,11 +6,17 @@
     </div>
      <p class="about fs-4">
           My name is Ghamzah Samuels and I'm an aspiring software developer .
-          I'm an honest and hardworking person. I have an intelligent mind that
+          I'm an honest, resilient and hardworking person. I have an intelligent mind that
           brings out the energy within me. I'm a reliable person you can always
           depend on me. New tasks brings me independence and will prove my
           ability. Team work is a passion for me.
         </p>
   </div>
 </template>
+<style scoped>
+.about{
+  color: white;
+  font-weight: 500;
+}
+</style>
 
