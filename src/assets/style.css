@@ -42,6 +42,11 @@
 }
 body{
   background-color: rgb(49, 176, 176);
+  color: white;
+
+}
+.display-2{
+  color: white;
 }
 .log{
   border: 1px solid black;
