@@ -1,17 +1,17 @@
 <template>
-  <div class="container-fluid vh-100">
+  <div class="container-fluid vh-100 ">
     <div class="row mb-4">
       <h2 class="display-2">Testimonials</h2>
     </div>
 
-    <div v-if="displayTestimonials" id="carouselExampleAutoplaying" class="carousel slide bg-black" data-bs-ride="carousel">
+    <div v-if="displayTestimonials" id="carouselExampleAutoplaying" class="carousel slide rounded-5 align-content-center justify-content-center" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div v-for="(testimonial, index) in displayTestimonials" :key="testimonial.id" :class="{ 'carousel-item': true, active: index === 0 }">
           <div class="row g-0 bg-black rounded-2 text-white">
             <div class="col-lg-4">
               <img :src="testimonial.profile" class="carousel-image d-inline img-fluid rounded-5" alt="profile">
             </div>
-            <div class="col-lg-8 bg-black">
+            <div class="col-lg-8 carry rounded-5">
               <div class="card-body">
                 <h4 class="card-title text-white text-decoration-underline fs-3">{{ testimonial.position }}
                 </h4>
@@ -65,7 +65,9 @@ export default {
   flex-grow: 1;
 }
 
-
+.carry{
+  background-color: rgb(27, 187, 168);
+}
 
 .carousel-caption {
   text-align: center;

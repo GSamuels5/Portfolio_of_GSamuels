@@ -1,13 +1,13 @@
 <template>
   <div class="row">
 
-<h2 class="display-2">Resume</h2>
+<h2 class="display-2">Experience</h2>
 </div>
      <div class="container">
    
 
-<h2>Education</h2>
-<div class="educat  mx-2  w-100   my-3 mb-4" v-if="displayEducation">
+<h2 class="text-white">Education</h2>
+<div class="educat  mx-2  w-100   my-3 mb-4 " v-if="displayEducation">
   <div v-for="edu in displayEducation" :key="edu.id" id='fullCard' class="card border-secondary h-100 m-auto d-flex ">
   
       <div class="card-header"><h4>{{ edu.institution }}</h4></div>
@@ -27,8 +27,11 @@
 
 
           </div>
+          <div class="worker">
+            <h2>Employment </h2>
+          </div>
     
-          <h3>Skills</h3>
+          <h2>Skills</h2>
             <!-- <div class="education d-flex mx-2 justify-content-start w-100 mt-6" v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" class="card mb-3  m-auto h-100 " >
         
@@ -47,9 +50,9 @@
   </div>
 </div>
       </div> -->
-        <div class="education my-3 d-flex w-100 d-flex  " v-if="displaySkills">
+        <div class="education my-3   " v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" >
-        <div class="card shadow " id="skillset">
+        <div class="card shadow mb-3" id="skillset">
   <div class="row g-0">
     <div class="col-md-4 border-black">
       <img :src="skill.image" class="img-fluid rounded-start" alt="image">
@@ -118,11 +121,12 @@ this.$store.dispatch('fetchSkills')
 }
 
 .education {
-  display: flex;
+  display: inline-block;
   flex-wrap: wrap; /* Allow cards to wrap */
  /* Negative margin to counteract card margins */
   max-width: 500px;
   margin-bottom: 20px;
+
 
   
 }
@@ -134,15 +138,22 @@ this.$store.dispatch('fetchSkills')
 
   
 }
-
+#fullCard{
+  margin-bottom: 50px;
+  margin-left: 100%;
+}
 .border-black {
   border: 1px solid #000; /* Add border for demonstration */
 }
 #skillset{
   display: flex;
   border: #000 solid 2px ;
-  gap: 30px;
+  margin-bottom: 50px;
   
+}
+h2{
+  color: white;
+  text-decoration: underline;
 }
 
 </style>

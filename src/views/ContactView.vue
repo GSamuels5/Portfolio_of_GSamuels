@@ -59,12 +59,12 @@ export default {
   display: inline;
   width: 100%;
   color: aliceblue;
-  
+  font-size: larger;
   
 }
 .from{
   flex-wrap: wrap;
-  background-color: green;
+  background-color:rgb(27, 187, 168);
   border: 2px black ;
   border-radius: 10%;
 }

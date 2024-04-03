@@ -14,7 +14,7 @@
             <router-link to="/about" class="nav-link">About</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/resume" class="nav-link">Resume</router-link>
+            <router-link to="/resume" class="nav-link">Experience</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/projects" class="nav-link">Projects</router-link>

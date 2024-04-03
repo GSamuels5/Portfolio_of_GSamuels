@@ -7,12 +7,32 @@
 }
 /* from app view */
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Courgette", cursive;
+  font-weight: 200;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #000;
+    
   }
+  body, html {
+    margin: 0;
+    padding: 0;
+     /* Prevent scrollbars */
+    width: 100%;
+    height: 100%;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire container */
+    z-index: -1; /* Ensure the video is behind other content */
+}
+
   .navbar{
     background-color: grey;
   }
@@ -43,33 +63,24 @@
 body{
   background-color: rgb(49, 176, 176);
   color: white;
-  font-family: "Lobster", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  
+  
+
 
 }
 .display-2{
   color: white;
 }
-.log{
-  border: 1px solid black;
-  background-color: rgb(27, 187, 27);
-  width: 540px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 25% 25% 0 0;
-  margin-bottom: 40px;
-}
+
 /* footer */
 .feet{
-  margin-bottom: 0;
   background-color: grey;
 }
 /* image */
 .picture{
   width: 300px;
   border-radius: 15% 15% 26% 26%;
-animation: fadePic 2s ease-in;
+animation: fadePic 4s ease-in;
 }
 @keyframes fadePic {
   0% {
@@ -82,20 +93,20 @@ animation: fadePic 2s ease-in;
 
 /* navbar */
 .nav-link:hover{
-text-decoration: green underline;
+text-decoration: rgb(27, 187, 168) 5px underline;
 }
-.log {
+
+.log2 {
   border: 1px solid black;
-  background-color: rgb(27, 187, 27);
+  background-color: rgb(27, 187, 168);
   width: 540px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 25% 25% 0 0;
-  margin-bottom: 40px;
   position: relative;
   overflow: hidden;
-  transform: translateY(-100px);
-  animation: slideIn 2s forwards, fallIn 4s 4s forwards;
+  opacity: 0; /* Initially hide the text */
+  animation: slideIn 3s 3s forwards;
 }
 
 @keyframes slideIn {
@@ -104,11 +115,25 @@ text-decoration: green underline;
     transform: translateX(-100px);
   }
   100% {
-    opacity: 1;
+    opacity: 1; /* Show the text when animation completes */
     transform: translateX(0);
   }
 }
 
+.greet{
+  border: 1px solid black;
+  background-color: rgb(27, 187, 168);
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:  25% 25% ;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  transform: translateY(-10px);
+  opacity: 0;
+  animation: fallIn 2s 2s forwards
+}
 @keyframes fallIn {
   0% {
     opacity: 0;
@@ -161,4 +186,4 @@ font-weight: bold;
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&display=swap')
