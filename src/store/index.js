@@ -8,6 +8,7 @@ export default createStore({
     skills: null,
     testimonials: null,
     projects: null,
+    experience:null,
   },
   getters: {
   },
@@ -24,6 +25,10 @@ export default createStore({
                             },
                             setProjects(state, value){
                               state.projects = value
+                                  }
+                                  ,
+                            setExperience(state, value){
+                              state.experience = value
                                   }
   },
   actions: {
@@ -48,6 +53,11 @@ export default createStore({
       let res = await fetch(dataUrl)
       let{projects} = await res.json()
       context.commit('setProjects',projects)
+    },
+    async fetchExperience(context){
+      let res = await fetch(dataUrl)
+      let{experience} = await res.json()
+      context.commit('setExperience',experience)
     }
     // async fetchJobTitle(context){
 
