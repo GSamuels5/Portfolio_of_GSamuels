@@ -1,16 +1,16 @@
 <template>
-     <div class="container ">
+     <div class="container-fluid  ">
     <div class="row ">
 
       <h2 class="display-2">Projects</h2>
     </div>
     <div class="col">
-      <div class="education d-flex flex-sm-wrap w-100" v-if="displayProjects">
+      <div class=" d-flex flex-sm-wrap justify-content-center" v-if="displayProjects">
     <div v-for="pros in displayProjects" :key="pros.id" >
-      <div class="row row-cols-1 d-inline g-2 mb-4 ">
+      <div class="row row-cols-1 d-inline  mb-4 ">
     <div class="col">
-      <div class="card">
-        <img :src="pros.image" class="card-img-top" alt="image">
+      <div class="card ">
+        <img :src="pros.image" class="card-img-top d-flex justify-content-center mx-auto " alt="image" style="width: 16rem ; height: 13rem;">
         <div class="card-body">
           <h5 class="card-title">{{ pros.name }}</h5>
           <p class="card-text">{{ pros.description }}</p>

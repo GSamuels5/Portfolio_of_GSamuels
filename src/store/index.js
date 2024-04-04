@@ -57,6 +57,7 @@ export default createStore({
     async fetchExperience(context){
       let res = await fetch(dataUrl)
       let{experience} = await res.json()
+      console.log(experience);
       context.commit('setExperience',experience)
     }
     // async fetchJobTitle(context){

@@ -12,7 +12,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #000;
+    /* color: #000; */
     
   }
   body, html {
@@ -34,7 +34,7 @@
 }
 
   .navbar{
-    background-color: grey;
+  color: #fff;
   }
   nav {
     padding: 30px;
@@ -80,7 +80,7 @@ body{
 .picture{
   width: 300px;
   border-radius: 15% 15% 26% 26%;
-animation: fadePic 4s ease-in;
+animation: fadePic 1s ease-in;
 }
 @keyframes fadePic {
   0% {
@@ -106,7 +106,7 @@ text-decoration: rgb(27, 187, 168) 5px underline;
   position: relative;
   overflow: hidden;
   opacity: 0; /* Initially hide the text */
-  animation: slideIn 3s 3s forwards;
+  animation: slideIn  1.5s forwards;
 }
 
 @keyframes slideIn {
@@ -132,7 +132,7 @@ text-decoration: rgb(27, 187, 168) 5px underline;
   margin: auto;
   transform: translateY(-10px);
   opacity: 0;
-  animation: fallIn 2s 2s forwards
+  animation: fallIn 1.3s 1.3s forwards
 }
 @keyframes fallIn {
   0% {

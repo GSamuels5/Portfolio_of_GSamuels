@@ -30,7 +30,21 @@
           <div class="worker">
             <h2>Employment </h2>
           </div>
-    
+    <div class="experience"  v-if="displayExperience">
+      <div class="row">
+
+        <div class="col" v-for="exp in displayExperience" :key="exp.id">
+      <div class="card " id="exp">
+        <div class="card-body ">
+          <h4 class="card-title  "><b>Company:</b> <span>{{ exp.company }}</span></h4>
+          <h5 class="card-text "><b>Position:</b> <span>{{ exp.position }}</span></h5>
+          <h5 class="card-text "><b>Duration:</b> <span>{{ exp.year }}</span></h5>
+          <h5 class="card-text "><b>Reason for leaving:</b> <span>{{ exp.left }}</span> </h5>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
           <h2>Skills</h2>
             <!-- <div class="education d-flex mx-2 justify-content-start w-100 mt-6" v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" class="card mb-3  m-auto h-100 " >
@@ -50,26 +64,13 @@
   </div>
 </div>
       </div> -->
-        <div class="education my-3  mx-4 " v-if="displaySkills">
+        <div class="education my-5 gap-3 mx-4 " v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" >
-        <!-- <div class="card shadow h-100 " id="skillset">
-  <div class="row g-0">
-    <div class="col-lg-3 border-black">
-      <img :src="skill.image" class="img-fluid image-fit " alt="image">
-    </div>
-    <div class="">
-      <div class="card-body">
-        <h5 class="card-title">{{ skill.title }}</h5>
-        <p class="card-text">{{skill.experience}}</p>
-      </div>
-    </div>
-  </div>
-</div> -->
-<div class="card mb-3 h-100 skills ">
-  <img :src="skill.image" class="card-img-top image-fluid image-fit " alt="image">
+<div class="card  h-100 skills my-3  justify-content-space-between" style="max-width: 300px;">
+  <img :src="skill.image" class="card-img-top image-fluid image-fit " alt="image" style=" height: 10rem;">
   <div class="card-body">
     <h4 class="card-title">{{ skill.title }}</h4>
-    <h5 class="card-text">{{skill.experience}}</h5>
+    <h5 class="card-text">{{skill.experiences}}</h5>
    
   </div>
 </div>
@@ -135,43 +136,51 @@ this.$store.dispatch('fetchExperience')
     width: 100%; /* Ensure cards take full width */
     margin-bottom: 20px; /* Add margin between cards */
   }
+  .skills{
+    display:flexbox;
+  }
 }
 
 .education {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Display two columns */
+  grid-template-columns: repeat(3, 1fr); /* Display two columns */
     justify-items: center;
   /* grid-template-columns: repeat(1, ); */
    /* Allow cards to wrap */
  /* Negative margin to counteract card margins */
 
-  margin-bottom: 20px;
-
 
   
 }
-
+b{
+margin: 0;
+}
+span{
+  margin-left:80px;
+}
+#exp{
+justify-content: flex;
+background-color: #000;
+color: #fff;
+}
  .skills{
-
-  width: 50%; /* Ensure card takes full width of its container */
-  margin-right: 20px;
-margin-bottom: 20px;
-
+background-color: #d9d9d9;
+/* margin-bottom: 10px; */
   
 }
 
 #fullCard{
   margin-bottom: 50px;
   margin-left: 100%;
-  background-color: rgb(49, 176, 176);
+  background-color: #000;
   color: #fff;
 }
-.image-fit {
-  object-fit: cover; /* Use cover to fill the container while maintaining aspect ratio */
-  height: 100%; 
-  width: auto;
+/* .image-fit { */
+  /* object-fit: cover; */
+  /* height: 100%;  */
+  /* width: auto; */
   /* Ensure the image takes full height of its container */
-}
+/* } */
 .border-black {
   border: 1px solid #000; /* Add border for demonstration */
 }
