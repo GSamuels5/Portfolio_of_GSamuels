@@ -27,7 +27,7 @@
           </form>
         </div>
       </div>
-      <div class="col-md-6 text-white bg-secondary from ">
+      <div class="col-md-6 text-white bg-transparent shadow  from ">
         <div class="contacts p-4 ">
           <h3>Reach me via:</h3>
           <h4>Cell number: 06229789711 <i class="bi bi-whatsapp"></i></h4>
@@ -64,8 +64,8 @@ export default {
 }
 .from{
   flex-wrap: wrap;
-  background-color:rgb(27, 187, 168);
-  border: 2px black ;
+  background-color:rgb(54, 27, 187);
+  border: 4px solid black ;
   border-radius: 10%;
 }
 

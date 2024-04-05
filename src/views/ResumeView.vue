@@ -64,9 +64,9 @@
   </div>
 </div>
       </div> -->
-        <div class="education my-5 gap-3 mx-4 " v-if="displaySkills">
+        <div class="education my-5 gap-3 mx-4  d-grid d-sm-block " v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" >
-<div class="card  h-100 skills my-3  justify-content-space-between" style="max-width: 300px;">
+<div class="card  h-100 skills my-3   " style="max-width: 300px;">
   <img :src="skill.image" class="card-img-top image-fluid image-fit " alt="image" style=" height: 10rem;">
   <div class="card-body">
     <h4 class="card-title">{{ skill.title }}</h4>
@@ -129,22 +129,25 @@ this.$store.dispatch('fetchExperience')
 @media screen and (min-width: 300px) and (max-width: 900px) {
   .education {
     display: inline-flex;
+    
    /* Change from grid to block for stacking */
   }
-
-  .card {
+  .education .card {
+    display: block; /* Change to block for stacking */
     width: 100%; /* Ensure cards take full width */
     margin-bottom: 20px; /* Add margin between cards */
   }
   .skills{
-    display:flexbox;
+    display: inline-flex;
   }
 }
 
 .education {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Display two columns */
+
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
     justify-items: center;
+    /* flex-wrap: wrap; */
   /* grid-template-columns: repeat(1, ); */
    /* Allow cards to wrap */
  /* Negative margin to counteract card margins */

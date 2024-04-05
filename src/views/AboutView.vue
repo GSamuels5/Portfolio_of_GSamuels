@@ -5,7 +5,7 @@
       <h2 class="display-2">About</h2>
     </div>
     
-    <div class="about fs-4 rounded-5 m-auto p-4">
+    <div class="about fs-4 rounded-5 m-auto p-4 shadow">
           <p >
                My name is Ghamzah Samuels and I'm an aspiring software developer .
                I'm an honest, resilient and hardworking person. I have an intelligent mind that
@@ -32,9 +32,10 @@
 </template>
 <style scoped>
 .about{
-  color: white;
+  color:#d9d9d9;
   font-weight: 500;
-  background-color: rgb(27, 187, 168);
+  background-color: transparent;
+  border: 4px solid black ;
 }
 .cv{
   font-size: larger;

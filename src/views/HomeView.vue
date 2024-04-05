@@ -5,7 +5,7 @@
     <div >
 <h1 class="greet">Welcome </h1>
 <h2 class="log2">Portfolio of Ghamzah Samuels<br>
-  <span class="text-white">Software Developer</span>
+  <span class="text-dark">Software Developer</span>
 </h2>
 </div>
 
@@ -63,5 +63,65 @@ export default {
 .picture{
   width: auto;
 }
+}
+.log2 {
+  border: 4px solid black;
+  background-color: rgb(54, 27, 187);
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25% 25% 0 0;
+  position: relative;
+  overflow: hidden;
+  opacity: 0; /* Initially hide the text */
+  animation: slideIn  7s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1; /* Show the text when animation completes */
+    transform: translateX(0);
+  }
+}
+
+.greet{
+  border: 4px solid black;
+  background-color: rgb(54, 27, 187);
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:  25% 25% ;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  transform: translateY(-10px);
+  opacity: 0;
+  animation: fallIn 1.5s 1.5s forwards
+}
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.log h2 {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.log span {
+  display: block;
+  font-size: 0.8em;
+  color: white;
 }
 </style>
