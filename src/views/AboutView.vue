@@ -24,7 +24,9 @@
 
      
 
-               <button class="p-4 btn btn-link cv">Download my resume</button>
+               <button class="p-4 btn btn-link cv"> <a href="https://drive.google.com/file/d/13i-xNnvJIJK_A7kvELTPB3Luftht9d4t/view?usp=sharing" target="_blank">
+                Download my resume
+               </a></button>
              </div>
     </div>
 
@@ -32,9 +34,10 @@
 </template>
 <style scoped>
 .about{
-  color:#d9d9d9;
+  background-color: #d9d9d9;
+  color:#000;
   font-weight: 500;
-  background-color: transparent;
+  /* background-color: transparent; */
   border: 4px solid black ;
 }
 .cv{

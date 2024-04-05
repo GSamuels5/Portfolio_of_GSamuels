@@ -9,7 +9,7 @@
     <div v-for="pros in displayProjects" :key="pros.id" >
       <div class="row row-cols-1 d-sm-inline  mb-4 ">
     <div class="col">
-      <div class="card bg-dark text-white " style="width: 17rem; height: 26rem;">
+      <div class="card " style="width: 17rem; height: 26rem;">
         <img :src="pros.image" class="card-img-top d-flex justify-content-center  " alt="image" style="width: 16.9rem ; height: 13rem;">
         <div class="card-body">
           <h5 class="card-title">{{ pros.name }}</h5>
@@ -56,8 +56,25 @@
     /* align-items: center; */
     margin-right: 0;
     padding-right: 0;
+    width: 250px;
 
   }
+  .row{
+    width: 250px
+  }
+}
+span{
+  padding: 10px;
+ 
+}
+button{
+  background-color: rgb(16, 130, 237);
+  border: 2px solid;
+  border-radius: 15%;
+}
+.card{
+  background-color: #d9d9d9;
+  color: black;
 }
 
 </style>

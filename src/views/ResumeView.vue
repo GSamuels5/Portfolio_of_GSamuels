@@ -12,15 +12,15 @@
   
       <div class="card-header"><h4>{{ edu.institution }}</h4></div>
       <div class="eduCard card-body ">
-        <h5 class="card-title ">Name:<span class="data">{{ edu.description }}
+        <h5 class="card-title "><b>Name:</b><span >{{ edu.description }}
         </span>
       </h5>
           
         
-        <h5 class="card-title">Certificate:{{ edu.type }} </h5>
+        <h5 class="card-title"><b>Certificate:</b> <span>{{ edu.type }}</span> </h5>
         
       </div>
-      <div class="card-footer"><h5 class="card-title">Year:<span class="data">{{ edu.year }}</span></h5></div>
+      <div class="card-footer"><h5 class="card-title"><b>Year:</b><span >{{ edu.year }}</span></h5></div>
     </div>
        
       </div>
@@ -30,21 +30,25 @@
           <div class="worker">
             <h2>Employment </h2>
           </div>
-    <div class="experience"  v-if="displayExperience">
-      <div class="row">
-
-        <div class="col" v-for="exp in displayExperience" :key="exp.id">
-      <div class="card " id="exp">
-        <div class="card-body ">
-          <h4 class="card-title  "><b>Company:</b> <span>{{ exp.company }}</span></h4>
-          <h5 class="card-text "><b>Position:</b> <span>{{ exp.position }}</span></h5>
-          <h5 class="card-text "><b>Duration:</b> <span>{{ exp.year }}</span></h5>
-          <h5 class="card-text "><b>Reason for leaving:</b> <span>{{ exp.left }}</span> </h5>
-        </div>
+          <div class="experience mx-2     my-3 mb-4 " v-if="displayExperience">
+  <div v-for="exp in displayExperience" :key="exp.id" id='fullCard' class="card border-secondary h-100 m-auto mb-3 d-flex ">
+  
+      <div class="card-header"><h4><b>Company:</b> <span>{{ exp.company }}</span></h4></div>
+      <div class="eduCard card-body ">
+        <h5 class="card-title "><b>Position:</b> <span>{{ exp.position }}</span>
+      </h5>
+          
+        
+        
+      </div>
+      <h5 class="card-title"><b>Reason for leaving:</b> <span>{{ exp.left }}</span> </h5>
+        
+      <div class="card-footer"><h5 class="card-title"><b>Duration:</b> <span>{{ exp.year }}</span></h5></div>
       </div>
     </div>
-      </div>
-    </div>
+       
+   
+  
           <h2>Skills</h2>
             <!-- <div class="education d-flex mx-2 justify-content-start w-100 mt-6" v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" class="card mb-3  m-auto h-100 " >
@@ -64,8 +68,8 @@
   </div>
 </div>
       </div> -->
-        <div class="education my-5 gap-3 mx-4  d-grid d-sm-block " v-if="displaySkills">
-              <div v-for="skill in displaySkills" :key="skill.id" >
+        <div class="education my-5 gap-3 mx-4  " v-if="displaySkills">
+              <div v-for="skill in displaySkills" :key="skill.id" style="width: 300px;">
 <div class="card  h-100 skills my-3   " style="max-width: 300px;">
   <img :src="skill.image" class="card-img-top image-fluid image-fit " alt="image" style=" height: 10rem;">
   <div class="card-body">
@@ -112,19 +116,11 @@ this.$store.dispatch('fetchExperience')
 </script>
 
 // <style scoped>
-/* @media screen and (min-width: 300px) and (max-width: 900px) {
-  .education .card{
-    grid-auto-columns: min-content;
-    margin-right: auto;
-  flex: 0 0 100%;
-  margin-bottom: 10px;
-
-  }
+.experience{
+  width: 80%;
+  align-content: center;
+  justify-items: center;
 }
-.education{
-  display: flex;
-  margin-left: 0;
-} */
 
 @media screen and (min-width: 300px) and (max-width: 900px) {
   .education {
@@ -140,13 +136,26 @@ this.$store.dispatch('fetchExperience')
   .skills{
     display: inline-flex;
   }
+  #fullCard{
+    font-size: smaller;
+  }
+  .expe{
+    font-size: smaller;
+  }
 }
-
+.expe{
+  width: 88%;
+  color: #d9d9d9;
+  margin-left:0;
+}
 .education {
 
-  /* display: grid; */
+  display: flex;
+  flex-wrap: wrap;
+  
   /* grid-template-columns: repeat(3, 1fr); */
     justify-items: center;
+    justify-content: center;
     /* flex-wrap: wrap; */
   /* grid-template-columns: repeat(1, ); */
    /* Allow cards to wrap */
@@ -159,15 +168,12 @@ b{
 margin: 0;
 }
 span{
-  margin-left:80px;
+  margin-left:50px;
 }
-#exp{
-justify-content: flex;
-background-color: #000;
-color: #fff;
-}
+
  .skills{
 background-color: #d9d9d9;
+width: fit-content;
 /* margin-bottom: 10px; */
   
 }
@@ -175,8 +181,8 @@ background-color: #d9d9d9;
 #fullCard{
   margin-bottom: 50px;
   margin-left: 100%;
-  background-color: #000;
-  color: #fff;
+  background-color: #d9d9d9;
+  color: #000;
 }
 /* .image-fit { */
   /* object-fit: cover; */
@@ -192,6 +198,9 @@ background-color: #d9d9d9;
   border: #000 solid 2px ;
   margin-bottom: 50px;
   
+}
+.experience{
+  color: #d9d9d9;
 }
 h2{
   color: white;

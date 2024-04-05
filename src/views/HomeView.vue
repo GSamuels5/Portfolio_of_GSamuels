@@ -66,7 +66,7 @@ export default {
 }
 .log2 {
   border: 4px solid black;
-  background-color: rgb(54, 27, 187);
+  background-color: #d9d9d9;
   width: 540px;
   margin-left: auto;
   margin-right: auto;
@@ -75,6 +75,7 @@ export default {
   overflow: hidden;
   opacity: 0; /* Initially hide the text */
   animation: slideIn  7s forwards;
+  color: #000;
 }
 
 @keyframes slideIn {
@@ -90,7 +91,7 @@ export default {
 
 .greet{
   border: 4px solid black;
-  background-color: rgb(54, 27, 187);
+  background-color: #d9d9d9;
   width: 540px;
   margin-left: auto;
   margin-right: auto;
@@ -100,7 +101,8 @@ export default {
   margin: auto;
   transform: translateY(-10px);
   opacity: 0;
-  animation: fallIn 1.5s 1.5s forwards
+  animation: fallIn 1.5s 1.5s forwards;
+  color: #000;
 }
 @keyframes fallIn {
   0% {

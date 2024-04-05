@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid vh-100 mb-4">
+  <div class="container-fluid mb-4 tests">
     <div class="row mb-4 test">
       <h2 class="display-2">Testimonials</h2>
     </div>
@@ -7,16 +7,16 @@
     <div v-if="displayTestimonials" id="carouselExampleAutoplaying" class="carousel slide mt-5 mb-5 " data-bs-ride="carousel">
       <div class="carousel-inner">
         <div v-for="(testimonial, index) in displayTestimonials" :key="testimonial.id" :class="{ 'carousel-item': true, active: index === 0 }">
-          <div class="row   carry rounded-5 text-white">
+          <div class="row   carry rounded-5 text-black">
             <div class="col-lg-4">
-              <img :src="testimonial.profile" class="carousel-image d-inline img-fluid rounded-5" alt="profile" style="height:20rem;width: auto;">
+              <img :src="testimonial.profile" class="carousel-image d-inline img-fluid " alt="profile" style="height:20rem;width: 30rem;">
             </div>
-            <div class="col-lg-8  rounded-5">
+            <div class="col-lg-8  ">
               <div class="card-body">
-                <h4 class="card-title text-white text-decoration-underline fs-3">{{ testimonial.position }}
+                <h4 class="card-title text-black text-decoration-underline fs-3">{{ testimonial.position }}
                 </h4>
                 <h5 class="mb-5">{{ testimonial.name }}</h5>
-                <p class="card-text text-white mb-4 px-3">{{ testimonial.quotes }}</p>
+                <p class="card-text text-black mb-4 px-3">{{ testimonial.quotes }}</p>
               </div>
             </div>
           </div>
@@ -48,6 +48,9 @@ export default {
 </script>
 
 <style scoped>
+.tests{
+  min-height: 100vh;
+}
 .card-container {
   width: 95%;
   padding: 10px;
@@ -60,7 +63,7 @@ export default {
   flex-direction: column;
 }
 .card-text{
-  font-size:larger
+  font-size: 20px
 }
 
 /* .card-body {
@@ -68,12 +71,15 @@ export default {
 } */
 
 .carry{
-  background-color: rgb(60, 49, 176);
+  background-color: #d9d9d9;
 }
 
 .carousel-caption {
   text-align: center;
   color: white;
+}
+.carousel-image {
+  object-fit: cover;
 }
 .test{
   margin-bottom: 500px;
@@ -86,10 +92,12 @@ export default {
     font-size: smaller;
 
   }
+  .proj{
+    width: 250px;
+  }
   .card-body{
     display: inline;
     height: 600px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-bottom: 10px;
     font-size: smaller;
   }
