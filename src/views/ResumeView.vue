@@ -30,8 +30,8 @@
           <div class="worker">
             <h2>Employment </h2>
           </div>
-          <div class="experience mx-2     my-3 mb-4 " v-if="displayExperience">
-  <div v-for="exp in displayExperience" :key="exp.id" id='fullCard' class="card border-secondary h-100 m-auto mb-3 d-flex ">
+          <div class="experience mx-2 d-grid gap-2 my-3 mb-4 " v-if="displayExperience">
+  <div v-for="exp in displayExperience" :key="exp.id" id='fullCard' class="card border-secondary h-100 shadow mb-3  ">
   
       <div class="card-header"><h4><b>Company:</b> <span>{{ exp.company }}</span></h4></div>
       <div class="eduCard card-body ">
@@ -117,11 +117,28 @@ this.$store.dispatch('fetchExperience')
 
 // <style scoped>
 .experience{
-  width: 80%;
-  align-content: center;
-  justify-items: center;
+  width: 87.3rem;
+  padding-left: 100px;
+  /* align-items: center; */
+  /* justify-self: center; */
+  /* margin-right:100px ; */
+
+}
+#fullCard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow intensity */
+  transform: translateY(-50px); /* Move the card slightly upwards */
+  transition: all 0.3s ease;
 }
 
+.education .card:hover .card-img-top {
+  transform: scale(1.1); /* Increase scale on hover */
+  transition: transform 0.5s ease;
+}
+
+.education .card:hover .card-body {
+  font-size: 2rem; /* Increase font size on hover */
+  transition: font-size 0.5s ease;
+}
 @media screen and (min-width: 300px) and (max-width: 900px) {
   .education {
     display: inline-flex;
@@ -139,8 +156,11 @@ this.$store.dispatch('fetchExperience')
   #fullCard{
     font-size: smaller;
   }
-  .expe{
+  .experience{
+    width: auto;
     font-size: smaller;
+
+  padding-left: 0;
   }
 }
 .expe{
@@ -180,7 +200,6 @@ width: fit-content;
 
 #fullCard{
   margin-bottom: 50px;
-  margin-left: 100%;
   background-color: #d9d9d9;
   color: #000;
 }

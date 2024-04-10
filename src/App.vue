@@ -7,6 +7,8 @@
         <source src="./assets/Free_Binary_Code_4K_Long_Loop_Screensaver.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+  
+    
       <Spinner v-if="showSpinner"/>
           <router-view @routeChangeStart="startSpinner" @routeChangeEnd="stopSpinner" />
   
@@ -17,6 +19,7 @@
     
 </template>
 <script>
+
 import Footer from "./components/Footer.vue";
 import NavBar from "./components/NavBar.vue";
 import Spinner from "./components/Spinner.vue";
