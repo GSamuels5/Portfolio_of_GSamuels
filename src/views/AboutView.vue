@@ -1,11 +1,11 @@
 <template>
-  <div class="container-fluid vh-100 mb-5">
+  <div class="container-fluid page">
     <div class="row">
 
       <h2 class="display-2">About</h2>
     </div>
     
-    <div class="about fs-4 rounded-5 m-auto p-4 shadow">
+    <div class="about fs-4 rounded-5  p-4 shadow">
           <p >
                My name is Ghamzah Samuels and I'm an aspiring software developer .
                I'm an honest, resilient and hardworking person. I have an intelligent mind that
@@ -13,6 +13,7 @@
                depend on me. New tasks brings me independence and will prove my
                ability. Team work is a passion for me.
              </p>
+             <div class=" text-black dob"><h5>D.O.B</h5><h6> 26/09/1998</h6></div>
              <div class="d-block m-2">
               <button>
   <a href="https://www.linkedin.com/in/ghamzah-samuels-a931722b7" target="_blank">
@@ -39,9 +40,28 @@
   font-weight: 500;
   /* background-color: transparent; */
   border: 4px solid black ;
+  margin-bottom: 300px;
 }
 .cv{
   font-size: larger;
+}
+.dob{
+  font-weight:  bold;
+  font-size: 50%;
+  text-decoration: underline;
+}
+.page {
+  max-height: 100vh; /* Set minimum height to 100vh */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 900px) and (min-width: 300px){
+  .page {
+    max-height: 100%; /* Set height to auto for small screens */
+  }
+  /* .about{
+    margin-bottom: 650px;
+  } */
 }
 </style>
 
