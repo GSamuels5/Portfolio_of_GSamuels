@@ -9,6 +9,7 @@ export default createStore({
     testimonials: null,
     projects: null,
     experience:null,
+    soft:null,
   },
   getters: {
   },
@@ -29,7 +30,10 @@ export default createStore({
                                   ,
                             setExperience(state, value){
                               state.experience = value
-                                  }
+                                  },
+                                  setSoft(state, value){
+                                    state.soft = value
+                                        }
   },
   actions: {
 
@@ -59,6 +63,13 @@ export default createStore({
       let{experience} = await res.json()
       console.log(experience);
       context.commit('setExperience',experience)
+    }
+    ,
+    async fetchSoft(context){
+      let res = await fetch(dataUrl)
+      let{soft} = await res.json()
+      console.log(soft);
+      context.commit('setSoft',soft)
     }
     // async fetchJobTitle(context){
 

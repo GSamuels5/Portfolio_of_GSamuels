@@ -1,14 +1,14 @@
 <template>
-  <div class="row">
-
-<h2 class="display-2">Experience</h2>
-</div>
-     <div class="container">
+  <div class="container-fluid">
+       <div class="row">
+     
+     <h2 class="display-2">Experience</h2>
+     </div>
    
 
 <h2 class="text-white">Education</h2>
-<div class="educat  mx-2  w-100   my-3 mb-4 " v-if="displayEducation">
-  <div v-for="edu in displayEducation" :key="edu.id" id='fullCard' class="card border-secondary h-100 m-auto mb-3 d-flex ">
+<div class="educat  mx-2 d-grid gap-2 my-3 mb-4 " v-if="displayEducation">
+  <div v-for="edu in displayEducation" :key="edu.id" id='fullCard' class="card border-secondary h-100 shadow mb-3 ">
   
       <div class="card-header"><h4>{{ edu.institution }}</h4></div>
       <div class="eduCard card-body ">
@@ -24,10 +24,7 @@
     </div>
        
       </div>
-
-
-          </div>
-          <div class="worker">
+      <div class="worker my-4 ">
             <h2>Employment </h2>
           </div>
           <div class="experience mx-2 d-grid gap-2 my-3 mb-4 " v-if="displayExperience">
@@ -68,7 +65,7 @@
   </div>
 </div>
       </div> -->
-        <div class="education my-5 gap-3 mx-4  " v-if="displaySkills">
+        <div class="education my-5 gap-5 mx-4  " v-if="displaySkills">
               <div v-for="skill in displaySkills" :key="skill.id" style="width: 300px;">
 <div class="card  h-100 skills my-3   " style="max-width: 300px;">
   <img :src="skill.image" class="card-img-top image-fluid image-fit " alt="image" style=" height: 10rem;">
@@ -80,14 +77,24 @@
 </div>
       </div>
     </div>
-    
-       
-
-
+    <h2> Soft Skills</h2>
+    <div class="education  my-5 gap-5   " v-if="displaySoft">
+              <div v-for="skill in displaySoft" :key="skill.id" >
+<div class="card soft skills my-3 h-100  " style="width: 15rem;" >
+  <img :src="skill.pictures" class="card-img-top  img-skill " alt="image" style=" height: 10rem; ">
+  <div class="card-body">
+    <h4 class="card-title">{{ skill.softy }}</h4>
   
-          
-          
+   
+  </div>
+</div>
+      </div>
+    </div>
 
+  </div>
+
+          
+    
 
 </template>
 
@@ -103,12 +110,16 @@ displaySkills(){
 },
 displayExperience(){
   return this.$store.state.experience
+},
+displaySoft(){
+  return this.$store.state.soft
 }
   },
 mounted(){
   this.$store.dispatch('fetchEducation')
 this.$store.dispatch('fetchSkills')
 this.$store.dispatch('fetchExperience')
+this.$store.dispatch('fetchSoft')
 
 }
 }
@@ -116,7 +127,7 @@ this.$store.dispatch('fetchExperience')
 </script>
 
 // <style scoped>
-.experience{
+.experience .educat{
   width: 87.3rem;
   padding-left: 100px;
   /* align-items: center; */
@@ -125,9 +136,10 @@ this.$store.dispatch('fetchExperience')
 
 }
 #fullCard:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow intensity */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;/* Increase shadow intensity */
   transform: translateY(-50px); /* Move the card slightly upwards */
   transition: all 0.3s ease;
+  background-color: #000;
 }
 
 .education .card:hover .card-img-top {
@@ -135,10 +147,12 @@ this.$store.dispatch('fetchExperience')
   transition: transform 0.5s ease;
 }
 
-.education .card:hover .card-body {
-  font-size: 2rem; /* Increase font size on hover */
-  transition: font-size 0.5s ease;
+.card-title .card-text:hover  {
+  font-size: 10rem; /* Increase font size on hover */
+  transition: font-size 0.3s ease;
 }
+
+
 @media screen and (min-width: 300px) and (max-width: 900px) {
   .education {
     display: inline-flex;
@@ -150,11 +164,18 @@ this.$store.dispatch('fetchExperience')
     width: 100%; /* Ensure cards take full width */
     margin-bottom: 20px; /* Add margin between cards */
   }
+  .soft.card{
+  width:250px;
+}
   .skills{
     display: inline-flex;
   }
   #fullCard{
     font-size: smaller;
+  }
+  .img-skill{
+
+    width: 230px;
   }
   .experience{
     width: auto;
@@ -162,12 +183,16 @@ this.$store.dispatch('fetchExperience')
 
   padding-left: 0;
   }
+  
 }
 .expe{
   width: 88%;
-  color: #d9d9d9;
+  color: #fff;
   margin-left:0;
 }
+/* .img-skill{
+  width: ;
+} */
 .education {
 
   display: flex;
@@ -192,16 +217,17 @@ span{
 }
 
  .skills{
-background-color: #d9d9d9;
+background-color: transparent;
 width: fit-content;
 /* margin-bottom: 10px; */
+color: #d9d9d9;
   
 }
 
 #fullCard{
   margin-bottom: 50px;
-  background-color: #d9d9d9;
-  color: #000;
+  background-color: transparent;
+  color: #d9d9d9;
 }
 /* .image-fit { */
   /* object-fit: cover; */
@@ -218,6 +244,10 @@ width: fit-content;
   margin-bottom: 50px;
   
 }
+.card{
+  border: 5px solid black;
+}
+
 .experience{
   color: #d9d9d9;
 }

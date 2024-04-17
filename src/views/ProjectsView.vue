@@ -10,7 +10,7 @@
       <div class="row row-cols-1 d-sm-inline  mb-4 ">
     <div class="col">
       <div class="card " style="width: 17rem; height: 26rem;">
-        <img :src="pros.image" class="card-img-top d-flex justify-content-center  " alt="image" style="width: 16.9rem ; height: 13rem;">
+        <img :src="pros.image" class="card-img-top d-flex justify-content-center  " alt="image" style="width: 16.4rem ; height: 13rem;">
         <div class="card-body">
           <h5 class="card-title">{{ pros.name }}</h5>
           <p class="card-text d-flex">{{ pros.description }}</p>
@@ -61,6 +61,16 @@
   }
   .row{
     width: 250px
+  }.col{
+    border: none ;
+    margin-left:0;
+    align-content: center;
+    width: 250px;
+
+  }.card{
+    border: 5px solid black;
+    margin-right: 0;
+    width: 248px;
   }
 }
 span{
@@ -73,8 +83,13 @@ button{
   border-radius: 15%;
 }
 .card{
-  background-color: #d9d9d9;
-  color: black;
+border: 5px solid black;
+  background-color: transparent;
+  color: #d9d9d9;
 }
 
+.card:hover{
+  font-size:x-large;
+  font-weight: 500 bold;
+}
 </style>

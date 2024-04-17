@@ -3,7 +3,7 @@
     <div class="row mb-5">
       <h2 class="display-2 mb-2">Contact</h2>
       <div class="from col-md-6 ">
-        <div class="formation align-content-center p-4 ">
+        <div class="formation align-content-center text-white bg-transparent  p-4 ">
           <form action="https://formspree.io/f/mbjnykkk" method="post">
             <div class="mb-3">
               <label for="firstname" class="form-label">First name:</label>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="col-md-6 text-white bg-transparent shadow  from ">
-        <div class="contacts p-4 ">
+        <div class="contacts p-4 justify-space-around m-5">
           <h3>Reach me via:</h3>
           <h4>Cell number: 06229789711 <i class="bi bi-whatsapp"></i></h4>
           <p>Email: ghamzahsamuels23@gmail.com</p>
@@ -51,7 +51,7 @@
             </a>
           </button>
         </div>
-        <div class="p-4">
+        <div class="p-4 my-5">
           <h3>Location</h3>
           <h5><span>Western Cape - Cape Town </span> Lavender Hill Retreat 7945 <i class="bi bi-geo-alt-fill"></i></h5>
         </div>
@@ -71,16 +71,16 @@ export default {
 .formation {
   display: inline;
   width: 100%;
-  color: #000;
+  /* color: #000; */
   font-size: x-large;
   
 }
 label{
-  color: #000;
+  color: #d9d9d9;
 }
 .from{
   flex-wrap: wrap;
-  background-color:#d9d9d9;
+  /* background-color:#d9d9d9; */
   border: 4px solid black ;
   border-radius: 10%;
   color: #000;

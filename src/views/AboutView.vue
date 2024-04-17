@@ -5,15 +5,21 @@
       <h2 class="display-2">About</h2>
     </div>
     
-    <div class="about fs-4 rounded-5  p-4 shadow">
+    <div class="about fs-4 rounded-5  p-4 text-white bg-transparent shadow">
           <p >
                My name is Ghamzah Samuels and I'm an aspiring software developer .
                I'm an honest, resilient and hardworking person. I have an intelligent mind that
                brings out the energy within me. I'm a reliable person you can always
                depend on me. New tasks brings me independence and will prove my
                ability. Team work is a passion for me.
-             </p>
-             <div class=" text-black dob"><h5>D.O.B</h5><h6> 26/09/1998</h6></div>
+              </p>
+              <div class="hobbbies "> <h5>Hobbies:</h5><p class="justify-content-center align-content-center my-5"><span class="p-4">Jogging</span><img src="../assets/running.gif" alt="" class="img-fluid" style="height: 5rem;"><br>
+              <span class="p-4">Reading</span><img src="../assets/book-review.gif" alt="" class="img-fluid" style="height: 5rem;"><br>
+              <span class="p-4">Hiking</span><img src="../assets/hiking.png" alt="" class="img-fluid" style="height: 5rem;" ></p>
+             </div>
+             <div class="birth"><h5>D.O.B</h5><p class="justify-content-center align-content-center ">26/09/1998</p></div>
+             
+             
              <div class="d-block m-2">
               <button>
   <a href="https://www.linkedin.com/in/ghamzah-samuels-a931722b7" target="_blank">
@@ -35,8 +41,8 @@
 </template>
 <style scoped>
 .about{
-  background-color: #d9d9d9;
-  color:#000;
+  /* background-color: #d9d9d9; */
+  /* color:#000; */
   font-weight: 500;
   /* background-color: transparent; */
   border: 4px solid black ;
@@ -44,6 +50,20 @@
 }
 .cv{
   font-size: larger;
+}
+h5{
+  font-size: larger;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+h6{
+  font-size: large;
+  padding:10px
+}
+p{
+display: flex;
+align-content: center;
+justify-self: center;
 }
 .dob{
   font-weight:  bold;
@@ -53,11 +73,18 @@
 .page {
   max-height: 100vh; /* Set minimum height to 100vh */
 }
+.hobbies{
+  align-content: center;
+  justify-items: center;
+}
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 900px) and (min-width: 300px){
   .page {
     max-height: 100%; /* Set height to auto for small screens */
+  }
+  p{
+    display: block;
   }
   /* .about{
     margin-bottom: 650px;
