@@ -31,7 +31,7 @@
 
      
 
-               <button class="p-4 btn btn-link cv"> <a href="https://drive.google.com/file/d/13i-xNnvJIJK_A7kvELTPB3Luftht9d4t/view?usp=sharing" target="_blank">
+               <button class="p-4 btn btn-link cv"> <a href="https://drive.google.com/file/d/1pZraQSjiObskaFT-kmMqpdMQ9wVhQ1PI/view?usp=sharing" target="_blank">
                 Download my resume
                </a></button>
              </div>
