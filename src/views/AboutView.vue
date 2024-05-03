@@ -39,6 +39,7 @@
 
   </div>
 </template>
+
 <style scoped>
 .about{
   /* background-color: #d9d9d9; */

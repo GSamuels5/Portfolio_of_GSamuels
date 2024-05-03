@@ -25,6 +25,7 @@
 <style scoped>
 .spin{
 margin-bottom: 50%;
+
 }
 .loader {
   width: 60px;
