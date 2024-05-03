@@ -6,24 +6,7 @@
      </div>
    
 
-<h2 class="text-white">Education</h2>
-<div class="educat  mx-2 d-grid gap-2 my-3 mb-4 " v-if="displayEducation">
-  <div v-for="edu in displayEducation" :key="edu.id" id='fullCard' class="card border-secondary h-100 shadow mb-3 ">
-  
-      <div class="card-header"><h4>{{ edu.institution }}</h4></div>
-      <div class="eduCard card-body ">
-        <h5 class="card-title "><b>Name:</b><span >{{ edu.description }}
-        </span>
-      </h5>
-          
-        
-        <h5 class="card-title"><b>Certificate:</b> <span>{{ edu.type }}</span> </h5>
-        
-      </div>
-      <div class="card-footer"><h5 class="card-title"><b>Year:</b><span >{{ edu.year }}</span></h5></div>
-    </div>
-       
-      </div>
+
       <div class="worker my-4 ">
             <h2>Employment </h2>
           </div>
@@ -44,7 +27,24 @@
       </div>
     </div>
        
-   
+   <h2 class="text-white">Education</h2>
+<div class="educat  mx-2 d-grid gap-2 my-3 mb-4 " v-if="displayEducation">
+  <div v-for="edu in displayEducation" :key="edu.id" id='fullCard' class="card border-secondary h-100 shadow mb-3 ">
+  
+      <div class="card-header"><h4>{{ edu.institution }}</h4></div>
+      <div class="eduCard card-body ">
+        <h5 class="card-title "><b>Name:</b><span >{{ edu.description }}
+        </span>
+      </h5>
+          
+        
+        <h5 class="card-title"><b>Certificate:</b> <span>{{ edu.type }}</span> </h5>
+        
+      </div>
+      <div class="card-footer"><h5 class="card-title"><b>Year:</b><span >{{ edu.year }}</span></h5></div>
+    </div>
+       
+      </div>
   
           <h2>Skills</h2>
             <!-- <div class="education d-flex mx-2 justify-content-start w-100 mt-6" v-if="displaySkills">
