@@ -1,5 +1,5 @@
 <template>
-     <div class="container ">
+     <div class="container-fluid">
     <div class="row ">
 
       <h2 class="display-2">Projects</h2>
@@ -29,6 +29,14 @@
     </div>
         </div>
         </div></div>
+        <h3><u>Collaborations</u></h3>
+        <div class="extra-projects">
+
+          <h4>Scrum</h4>
+          <img src="https://i.ibb.co/dGdnvns/SCRUM.png" alt="scrum_picture" class="img-fluid" >
+         
+        </div>
+        <button class="btn mb-5" ><a href="https://drive.google.com/file/d/11ZE93DsdmES30BobwkS7jNxX2kDRYBCu/view?usp=sharing" class="text-black"  target="_blank">See More</a></button>
     </div>
 
     
@@ -75,12 +83,14 @@
 }
 span{
   padding: 10px;
+  
  
 }
 button{
   background-color: rgb(16, 130, 237);
   border: 2px solid;
   border-radius: 15%;
+  margin-right:5px
 }
 .card{
 border: 5px solid black;
@@ -88,7 +98,7 @@ border: 5px solid black;
   color: #d9d9d9;
 }
 
-.card:hover{
+.btn,.card:hover{
   font-size:x-large;
   font-weight: 500 bold;
 }
