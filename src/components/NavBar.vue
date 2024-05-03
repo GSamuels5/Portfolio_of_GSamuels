@@ -17,7 +17,7 @@
             <router-link to="/resume" class="nav-link">Education/Experience</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/projects" class="nav-link">Projects</router-link>
+            <router-link to="/projects" class="nav-link" @click="startSpinner">Projects</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/testimonials" class="nav-link">Testimonials</router-link>
@@ -40,7 +40,11 @@ export default{
 moveOver(){
   console.log('event');
 }
-  }
+  },
+  startSpinner() {
+      // Emit an event to start the spinner when a router link is clicked
+      this.$emit('startSpinner');
+    }
 }
 
 </script>

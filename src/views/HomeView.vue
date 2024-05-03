@@ -1,26 +1,40 @@
 <template>
- <div class="container-fluid ">
+ <div class="container-fluid home ">
  
-  <br><br>
-    <div >
-<h1 class="greet">Welcome </h1>
-<h2 class="log2">Portfolio of Ghamzah Samuels<br>
-  <span class="text-dark">Software Developer</span>
-</h2>
-</div>
-
-
   
-<div class="row">
+    <div class="row" >
+      <div class="col welcome">
+        <br>
+        <br><br>
+        <br>
+        <br>
 
-  <div class="floating ">
-    <img class='picture' src="https://i.ibb.co/Vvg5Z1X/20231009-110208p-p.jpg" alt="picture" loading="lazy">
-  </div>
+
+
+        <h1 class="greet" style="width: 100%;">Welcome </h1>
+        <h2 class="log2" style="width: 100%">Portfolio of Ghamzah Samuels<br>
+          <span class="text-dark">Software Developer</span>
+        </h2>
+      </div>
+<div class="col mb-5 ">
+
+<div class="floating mt-5">
+  <img class='picture' src="https://i.ibb.co/Vvg5Z1X/20231009-110208p-p.jpg" alt="picture" loading="lazy">
+</div>
 </div>
 <div>
 <router-link to="/about"><button class="about my-5 p-3"><span>Learn more</span></button></router-link>
   
 </div>
+</div>
+
+
+  
+
+<!-- <div>
+<router-link to="/about"><button class="about my-5 p-3"><span>Learn more</span></button></router-link>
+  
+</div> -->
   </div>
 </template>
 
@@ -49,12 +63,15 @@ export default {
        
 @media screen and (min-width: 300px) and (max-width: 900px) {
 .greet{
-  width: auto;
-  font-size: smaller;
+  height: auto;
+  width: 100%;
+  font-size: 30px;
+  
 }
 .log2{
-  width: auto;
-  font-size: smaller;
+  height: auto;
+  width: 100%;
+  font-size: 30px;
 }
 .floating{
   align-self: auto;
@@ -62,6 +79,8 @@ export default {
 }
 .picture{
   width: auto;
+}h1,h2{
+  width: 10rem;
 }
 }
 .log2 {
@@ -77,7 +96,10 @@ export default {
   animation: slideIn  7s forwards;
   color: #000;
 }
-
+.row{
+  align-content: center;
+  justify-content: center;
+}
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -103,6 +125,9 @@ export default {
   opacity: 0;
   animation: fallIn 1.5s 1.5s forwards;
   color: #000;
+}
+.home{
+  margin-bottom: 100px;
 }
 @keyframes fallIn {
   0% {

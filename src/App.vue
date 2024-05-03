@@ -9,8 +9,8 @@
     </video>
   
     
-      <Spinner v-if="showSpinner"/>
-          <router-view @routeChangeStart="startSpinner" @routeChangeEnd="stopSpinner" />
+      <Spinner v-if="showSpinner" />
+          <router-view v-if="!showSpinner" @routeChangeEnd="stopSpinner" @routeChangeStart="startSpinner"/>
   
         </main>
       
@@ -49,10 +49,18 @@ export default{
   mounted(){
     setTimeout(()=>{
       this.showSpinner = false
-      this.$emit("routeChangeEnd")
-    },1000)
-  }
-  }
+      this.$emit("routeChangeStart")
+    },1000
+  );
+    this.$router.beforeEach((to, from, next) => {
+      this.startSpinner();
+      next();
+    });
+
+    this.$router.afterEach(() => {
+      this.stopSpinner();}
+  
+  );}}
   
 </script>
 <style src="@/assets/style.css">

@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid ">
     <div class="row mb-5">
-      <h2 class="display-2 mb-2">Contact</h2>
+      <h2 class="display-2 mb-2">Reach Me</h2>
       <div class="from col-md-6 ">
         <div class="formation align-content-center text-white bg-transparent  p-4 ">
           <form action="https://formspree.io/f/mbjnykkk" method="post">
@@ -30,7 +30,7 @@
       <div class="col-md-6 text-white bg-transparent shadow  from ">
         <div class="contacts p-4 justify-space-around m-5">
           <h3>Reach me via:</h3>
-          <h4>Cell number: 06229789711 <i class="bi bi-whatsapp"></i></h4>
+          <h4>Cell number: 0622989711 <i class="bi bi-whatsapp"></i></h4>
           <p>Email: ghamzahsamuels23@gmail.com</p>
           <button>
 
