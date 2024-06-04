@@ -2,7 +2,7 @@
   <div class="container-fluid page">
     <div class="row">
 
-      <h2 class="display-2">About</h2>
+      <h2 class="display-2">About Me</h2>
     </div>
     
     <div class="about fs-4 rounded-5  p-4 text-white bg-transparent shadow">
@@ -31,7 +31,7 @@
 
      
 
-               <button class="p-4 btn btn-link cv"> <a href="https://drive.google.com/file/d/1pZraQSjiObskaFT-kmMqpdMQ9wVhQ1PI/view?usp=sharing" target="_blank">
+               <button class="p-4 btn btn-link cv"> <a href="https://drive.google.com/file/d/1yhp9E3_JRXRgcSqQT3fksDIY4jY9QgC_/view?usp=sharing" target="_blank">
                 Download my resume
                </a></button>
              </div>
