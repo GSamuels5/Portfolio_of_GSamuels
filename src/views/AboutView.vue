@@ -7,11 +7,12 @@
     
     <div class="about fs-4 rounded-5  p-4 text-white bg-transparent shadow">
           <p >
-               My name is Ghamzah Samuels and I'm an aspiring software developer .
-               I'm an honest, resilient and hardworking person. I have an intelligent mind that
-               brings out the energy within me. I'm a reliable person you can always
-               depend on me. New tasks brings me independence and will prove my
-               ability. Team work is a passion for me.
+            My name is Ghamzah Samuels, an aspiring software developer known for honesty, resilience, and a strong work ethic. 
+            Having an intelligent mind that energizes and a reliable nature, new tasks are welcomed as opportunities to demonstrate independence and ability. 
+            Teamwork is a passion, evident in over six months of experience in database administration, website design, and website development.
+While working in electrical roles, strong creative and analytical skills were developed. 
+Team collaboration has honed attention to detail and the ability to work effectively within a group. 
+Key soft skills include critical thinking, communication, time management, and flexibility.
               </p>
               <div class="hobbbies "> <h5>Hobbies:</h5><p class="justify-content-center align-content-center my-5"><span class="p-4">Jogging</span><img src="../assets/running.gif" alt="" class="img-fluid" style="height: 5rem;"><br>
               <span class="p-4">Reading</span><img src="../assets/book-review.gif" alt="" class="img-fluid" style="height: 5rem;"><br>
