@@ -72,9 +72,8 @@ justify-self: center;
   font-size: 50%;
   text-decoration: underline;
 }
-.page {
-  max-height: 100vh; /* Set minimum height to 100vh */
-}
+/* Set minimum height to 100vh */
+
 .hobbies{
   align-content: center;
   justify-items: center;

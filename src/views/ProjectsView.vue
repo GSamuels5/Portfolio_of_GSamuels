@@ -31,12 +31,17 @@
         </div></div>
         <h3><u>Collaborations</u></h3>
         <div class="extra-projects">
+<div class="scrum float-start">
 
-          <h4>Scrum</h4>
-          <img src="https://i.ibb.co/dGdnvns/SCRUM.png" alt="scrum_picture" class="img-fluid" >
-         
+  <h4>Scrum</h4>
+  <img src="https://i.ibb.co/dGdnvns/SCRUM.png" alt="scrum_picture" class="img-fluid" >
+  <button class="btn " ><a href="https://drive.google.com/file/d/11ZE93DsdmES30BobwkS7jNxX2kDRYBCu/view?usp=sharing" class="text-black"  target="_blank">See More</a></button>
+</div>
+          
+          <h4>Weather app</h4>
+          <img src="../assets/LCS-SOFTWARE-ENGINEERING.png" alt="scrum_picture" class="img-fluid" >
+          <button class="btn 3" ><a href="https://weather-report-ochre.vercel.app/" class="text-black"  target="_blank">See More</a></button>
         </div>
-        <button class="btn mb-5" ><a href="https://drive.google.com/file/d/11ZE93DsdmES30BobwkS7jNxX2kDRYBCu/view?usp=sharing" class="text-black"  target="_blank">See More</a></button>
     </div>
 
     
@@ -97,7 +102,9 @@ border: 5px solid black;
   background-color: transparent;
   color: #d9d9d9;
 }
+.extra-projects{
 
+}
 .btn,.card:hover{
   font-size:x-large;
   font-weight: 500 bold;
