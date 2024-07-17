@@ -84,6 +84,8 @@
     border: 5px solid black;
     margin-right: 0;
     width: 248px;
+  }.extra-projects{
+    margin-bottom: 50px;
   }
 }
 span{
@@ -100,11 +102,10 @@ button{
 .card{
 border: 5px solid black;
   background-color: transparent;
+  backdrop-filter: blur(20px);
   color: #d9d9d9;
 }
-.extra-projects{
 
-}
 .btn,.card:hover{
   font-size:x-large;
   font-weight: 500 bold;

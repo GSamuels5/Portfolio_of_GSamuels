@@ -218,6 +218,7 @@ span{
 
  .skills{
 background-color: transparent;
+backdrop-filter: blur(20px);
 width: fit-content;
 /* margin-bottom: 10px; */
 color: #d9d9d9;
@@ -227,6 +228,7 @@ color: #d9d9d9;
 #fullCard{
   margin-bottom: 50px;
   background-color: transparent;
+  backdrop-filter: blur(20px);
   color: #d9d9d9;
 }
 /* .image-fit { */

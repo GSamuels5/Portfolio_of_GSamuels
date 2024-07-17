@@ -49,6 +49,7 @@ Key soft skills include critical thinking, communication, time management, and f
   /* background-color: transparent; */
   border: 4px solid black ;
   margin-bottom: 300px;
+  backdrop-filter: blur(20px);
 }
 .cv{
   font-size: larger;

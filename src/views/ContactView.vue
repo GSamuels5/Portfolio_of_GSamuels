@@ -74,6 +74,7 @@ export default {
   /* color: #000; */
   font-size: x-large;
   
+  
 }
 label{
   color: #d9d9d9;
@@ -82,6 +83,7 @@ label{
   flex-wrap: wrap;
   /* background-color:#d9d9d9; */
   border: 4px solid black ;
+  backdrop-filter: blur(20px);
   border-radius: 10%;
   color: #000;
 }

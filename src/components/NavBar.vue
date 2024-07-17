@@ -52,5 +52,6 @@ moveOver(){
 .navbar{
   justify-content: center;
   color: #fff;
+  backdrop-filter: blur(20px);
 }
 </style>

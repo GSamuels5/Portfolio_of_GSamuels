@@ -52,6 +52,7 @@ export default {
 <style scoped>
 .about{
   background: none;
+  backdrop-filter: blur(20px);
   outline-color: white;
   border: 4px solid white;
   color: white;
