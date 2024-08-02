@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid ">
-    <div class="row mb-5">
+    <div class="row mb-5 gx-3">
       <h2 class="display-2 mb-2">Reach Me</h2>
       <div class="from col-md-6 ">
         <div class="formation align-content-center text-white bg-transparent  p-4 ">
@@ -82,10 +82,14 @@ label{
 .from{
   flex-wrap: wrap;
   /* background-color:#d9d9d9; */
-  border: 4px solid black ;
+  border: 3px solid #1a1a2e; ;
   backdrop-filter: blur(20px);
   border-radius: 10%;
   color: #000;
+
+}
+.row > div {
+  gap: 20px;
 }
 
 </style>

@@ -1,27 +1,40 @@
 <template>
   <div class="container-fluid page">
     <div class="row">
-
       <h2 class="display-2">About Me</h2>
     </div>
     
-    <div class="about fs-4 rounded-5  p-4 text-white bg-transparent shadow">
-          <p >
-            My name is Ghamzah Samuels, an aspiring software developer known for honesty, resilience, and a strong work ethic. 
+    <div class="about fs-4 rounded-5 p-4 text-white bg-transparent shadow">
+      <p>
+        My name is Ghamzah Samuels, an aspiring software developer known for honesty, resilience, and a strong work ethic. 
             Having an intelligent mind that energizes and a reliable nature, new tasks are welcomed as opportunities to demonstrate independence and ability. 
             Teamwork is a passion, evident in over six months of experience in database administration, website design, and website development.
 While working in electrical roles, strong creative and analytical skills were developed. 
 Team collaboration has honed attention to detail and the ability to work effectively within a group. 
 Key soft skills include critical thinking, communication, time management, and flexibility.
-              </p>
-              <div class="hobbbies "> <h5>Hobbies:</h5><p class="justify-content-center align-content-center my-5"><span class="p-4">Jogging</span><img src="../assets/running.gif" alt="" class="img-fluid" style="height: 5rem;"><br>
-              <span class="p-4">Reading</span><img src="../assets/book-review.gif" alt="" class="img-fluid" style="height: 5rem;"><br>
-              <span class="p-4">Hiking</span><img src="../assets/hiking.png" alt="" class="img-fluid" style="height: 5rem;" ></p>
-             </div>
-             <div class="birth"><h5>D.O.B</h5><p class="justify-content-center align-content-center ">26/09/1998</p></div>
-             
-             
-             <div class="d-block m-2">
+      </p>
+      <div class="hobbies">
+        <h5>Hobbies:</h5>
+        <div class="hobby-list">
+          <div class="hobby-item">
+            <span>Jogging</span>
+            <img src="../assets/running.gif" alt="" class="img-fluid">
+          </div>
+          <div class="hobby-item">
+            <span>Reading</span>
+            <img src="../assets/book-review.gif" alt="" class="img-fluid">
+          </div>
+          <div class="hobby-item">
+            <span>Hiking</span>
+            <img src="../assets/hiking.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="birth">
+        <h5>D.O.B</h5>
+        <p>26/09/1998</p>
+      </div>
+      <div class="d-block m-2">
               <button>
   <a href="https://www.linkedin.com/in/ghamzah-samuels-a931722b7" target="_blank">
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="blue" class="bi bi-linkedin" viewBox="1 1 14 14">
@@ -36,18 +49,20 @@ Key soft skills include critical thinking, communication, time management, and f
                 Download my resume
                </a></button>
              </div>
-    </div>
 
+      <!-- Your existing buttons and links -->
+    </div>
   </div>
 </template>
 
 <style scoped>
+/* Your existing styles */
 .about{
   /* background-color: #d9d9d9; */
   /* color:#000; */
   font-weight: 500;
   /* background-color: transparent; */
-  border: 4px solid black ;
+  border: 2px solid #1a1a2e ;
   margin-bottom: 300px;
   backdrop-filter: blur(20px);
 }
@@ -63,34 +78,46 @@ h6{
   font-size: large;
   padding:10px
 }
-p{
-display: flex;
-align-content: center;
-justify-self: center;
-}
-.dob{
-  font-weight:  bold;
-  font-size: 50%;
-  text-decoration: underline;
-}
-/* Set minimum height to 100vh */
-
-.hobbies{
-  align-content: center;
-  justify-items: center;
+.hobbies {
+  margin-bottom: 20px;
 }
 
-/* Media query for mobile devices */
-@media only screen and (max-width: 900px) and (min-width: 300px){
-  .page {
-    max-height: 100%; /* Set height to auto for small screens */
+.hobby-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.hobby-item span {
+  margin-bottom: 5px;
+}
+
+.hobby-item img {
+  height: 5rem;
+  width: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .hobby-list {
+    flex-direction: column;
   }
-  p{
-    display: block;
+  
+  .hobby-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
   }
-  /* .about{
-    margin-bottom: 650px;
-  } */
+  
+  .hobby-item span {
+    margin-right: 10px;
+    min-width: 80px;
+  }
 }
 </style>
-

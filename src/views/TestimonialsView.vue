@@ -89,7 +89,7 @@ export default {
   .carousel-item {
     /* display: flex; */
     flex-direction: column;
-    font-size: smaller;
+    font-size: xx-small;
 
   }
   .proj{

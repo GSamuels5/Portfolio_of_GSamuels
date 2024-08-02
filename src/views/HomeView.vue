@@ -6,14 +6,13 @@
       <div class="col welcome">
         <br>
         <br><br>
-        <br>
-        <br>
+  
 
 
 
         <h1 class="greet" style="width: 100%;">Welcome </h1>
         <h2 class="log2" style="width: 100%">Portfolio of Ghamzah Samuels<br>
-          <span class="text-dark">Software Developer</span>
+          <span class="">Software Developer</span>
         </h2>
       </div>
 <div class="col mb-5 ">
@@ -52,10 +51,10 @@ export default {
 <style scoped>
 .about{
   background: none;
-  backdrop-filter: blur(20px);
-  outline-color: white;
-  border: 4px solid white;
-  color: white;
+  backdrop-filter: blur(40px);
+  /* outline-color: white; */
+  border: 4px solid #1a1a2e;
+  color: #d9d9d9;
   font-weight: bolder;
   font-size: 20px;
 }
@@ -70,6 +69,7 @@ export default {
   
 }
 .log2{
+  margin-bottom: 20px;
   height: auto;
   width: 100%;
   font-size: 30px;
@@ -85,17 +85,17 @@ export default {
 }
 }
 .log2 {
-  border: 4px solid black;
-  background-color: #d9d9d9;
+  /* border: 4px solid black; */
+  background-color: transparent;
   width: 540px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 25% 25% 0 0;
   position: relative;
   overflow: hidden;
-  opacity: 0; /* Initially hide the text */
+  /* opacity: 0; Initially hide the text */
   animation: slideIn  7s forwards;
-  color: #000;
+  color: #d9d9d9;
 }
 .row{
   align-content: center;
@@ -113,8 +113,8 @@ export default {
 }
 
 .greet{
-  border: 4px solid black;
-  background-color: #d9d9d9;
+  /* border: 4px solid black; */
+  background-color: transparent;
   width: 540px;
   margin-left: auto;
   margin-right: auto;
@@ -124,8 +124,13 @@ export default {
   margin: auto;
   transform: translateY(-10px);
   opacity: 0;
-  animation: fallIn 1.5s 1.5s forwards;
-  color: #000;
+  animation: fallIn 1s 1s forwards;
+  color: #d9d9d9;
+  margin-bottom: 20px;
+  /* font-size: x-large; */
+}
+.welcome{
+  font-size: x-large;
 }
 .home{
   margin-bottom: 100px;
@@ -146,10 +151,12 @@ export default {
   padding: 20px;
   text-align: center;
 }
-
+h1, h2{
+  font-size: 50px;
+}
 .log span {
   display: block;
-  font-size: 0.8em;
-  color: white;
+  /* font-size: 0.8em; */
+  color: #d9d9d9;
 }
 </style>

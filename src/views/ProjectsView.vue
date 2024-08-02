@@ -75,7 +75,7 @@
   .row{
     width: 250px
   }.col{
-    border: none ;
+   border: 2px solid #1a1a2e; ;
     margin-left:0;
     align-content: center;
     width: 250px;
@@ -100,7 +100,7 @@ button{
   margin-right:5px
 }
 .card{
-border: 5px solid black;
+  border: 5px solid #1a1a2e; 
   background-color: transparent;
   backdrop-filter: blur(20px);
   color: #d9d9d9;

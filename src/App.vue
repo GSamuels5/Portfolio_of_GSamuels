@@ -1,13 +1,15 @@
 <template>
   <div>
-
+    <div class="background"></div>
     <NavBar/>
     <main class="container-fluid ">
-      <video id="video-background" autoplay loop muted>
-        <source src="./assets/Free_Binary_Code_4K_Long_Loop_Screensaver.mp4" type="video/mp4">
+      <!-- <video id="video-background" autoplay loop muted>
+        <source src="./assets/galaxy magic Animated background Free to use.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
+    </video> -->
   
+    <!-- <div class="background"></div> -->
+
     
       <Spinner v-if="showSpinner" />
           <router-view v-if="!showSpinner" @routeChangeEnd="stopSpinner" @routeChangeStart="startSpinner"/>
@@ -64,4 +66,5 @@ export default{
   
 </script>
 <style src="@/assets/style.css">
+
 </style>

@@ -11,7 +11,7 @@
             <h2>Employment </h2>
           </div>
           <div class="experience mx-2 d-grid gap-2 my-3 mb-4 " v-if="displayExperience">
-  <div v-for="exp in displayExperience" :key="exp.id" id='fullCard' class="card border-secondary h-100 shadow mb-3  ">
+  <div v-for="exp in displayExperience" :key="exp.id" id='fullCard' class="card h-100 shadow mb-3  ">
   
       <div class="card-header"><h4><b>Company:</b> <span>{{ exp.company }}</span></h4></div>
       <div class="eduCard card-body ">
@@ -29,7 +29,7 @@
        
    <h2 class="text-white">Education</h2>
 <div class="educat  mx-2 d-grid gap-2 my-3 mb-4 " v-if="displayEducation">
-  <div v-for="edu in displayEducation" :key="edu.id" id='fullCard' class="card border-secondary h-100 shadow mb-3 ">
+  <div v-for="edu in displayEducation" :key="edu.id" id='fullCard' class="card  h-100 shadow mb-3 ">
   
       <div class="card-header"><h4>{{ edu.institution }}</h4></div>
       <div class="eduCard card-body ">
@@ -206,7 +206,7 @@ this.$store.dispatch('fetchSoft')
    /* Allow cards to wrap */
  /* Negative margin to counteract card margins */
 
-
+/* border: 2px solid #1a1a2e; */
   
 }
 b{
@@ -230,6 +230,7 @@ color: #d9d9d9;
   background-color: transparent;
   backdrop-filter: blur(20px);
   color: #d9d9d9;
+  border: 2px solid #1a1a2e; 
 }
 /* .image-fit { */
   /* object-fit: cover; */
@@ -238,23 +239,23 @@ color: #d9d9d9;
   /* Ensure the image takes full height of its container */
 /* } */
 .border-black {
-  border: 1px solid #000; /* Add border for demonstration */
+  border: 2px solid #1a1a2e; /* Add border for demonstration */
 }
 #skillset{
   display: flex;
-  border: #000 solid 2px ;
+  border:solid #1a1a2e 2px ;
   margin-bottom: 50px;
   
 }
 .card{
-  border: 5px solid black;
+  border: 2px solid #1a1a2e;
 }
 
 .experience{
   color: #d9d9d9;
 }
 h2{
-  color: white;
+  color: #d9d9d9;
   text-decoration: underline;
 }
 

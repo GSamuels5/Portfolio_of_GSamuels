@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg justify-content-center  bg-transparent border-bottom" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg justify-content-center  bg-transparent " data-bs-theme="dark">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,6 +52,7 @@ moveOver(){
 .navbar{
   justify-content: center;
   color: #fff;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(40px);
+  border-bottom: #1a1a2e 4px solid;
 }
 </style>
