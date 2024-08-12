@@ -82,7 +82,7 @@ export default {
   object-fit: cover;
 }
 .test{
-  margin-bottom: 500px;
+  margin-bottom: 100px;
 }
 
 @media screen and (min-width: 300px) and (max-width: 900px) {
