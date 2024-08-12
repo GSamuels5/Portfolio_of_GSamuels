@@ -22,7 +22,7 @@
 </div>
 </div>
 <div>
-<router-link to="/about"><button class="about my-5 p-3"><span>Learn more</span></button></router-link>
+<a href="#about"><button class="about my-5 p-3"><span>Learn more</span></button></a>
   
 </div>
 </div>

@@ -1,70 +1,84 @@
 <template>
   <div>
     <div class="background"></div>
-    <NavBar/>
-    <main class="container-fluid ">
-      <!-- <video id="video-background" autoplay loop muted>
-        <source src="./assets/galaxy magic Animated background Free to use.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video> -->
-  
-    <!-- <div class="background"></div> -->
-
-    
+    <NavBar />
+    <main class="container-fluid">
+      <!-- Spinner -->
       <Spinner v-if="showSpinner" />
-          <router-view v-if="!showSpinner" @routeChangeEnd="stopSpinner" @routeChangeStart="startSpinner"/>
-  
-        </main>
       
-        <Footer/>
-  </div>
-    
-</template>
-<script>
+      <!-- Sections -->
+      <section id="home">
+        <HomeView />
+      </section>
 
+      <section id="about">
+        <AboutView />
+      </section>
+
+      <section id="resume">
+        <ResumeView />
+      </section>
+
+      <section id="projects">
+        <ProjectsView />
+      </section>
+
+      <section id="testimonials">
+        <TestimonialsView />
+      </section>
+
+      <section id="contact">
+        <ContactView />
+      </section>
+    </main>
+    <Footer />
+  </div>
+</template>
+
+<script>
 import Footer from "./components/Footer.vue";
 import NavBar from "./components/NavBar.vue";
 import Spinner from "./components/Spinner.vue";
 
-export default{
-  components:{
+// Import all the views
+import HomeView from "./views/HomeView.vue";
+import AboutView from "./views/AboutView.vue";
+import ResumeView from "./views/ResumeView.vue";
+import ProjectsView from "./views/ProjectsView.vue";
+import TestimonialsView from "./views/TestimonialsView.vue";
+import ContactView from "./views/ContactView.vue";
+
+export default {
+  components: {
     NavBar,
     Footer,
-    Spinner
-    
-
-    
+    Spinner,
+    HomeView,
+    AboutView,
+    ResumeView,
+    ProjectsView,
+    TestimonialsView,
+    ContactView,
   },
-  data(){
-    return{
+  data() {
+    return {
       showSpinner: true,
-    }
+    };
   },
-  methods:{
-    startSpinner(){
+  methods: {
+    startSpinner() {
       this.showSpinner = true;
     },
-    stopSpinner(){
-      this.showSpinner = false
-    }
+    stopSpinner() {
+      this.showSpinner = false;
+    },
   },
-  mounted(){
-    setTimeout(()=>{
-      this.showSpinner = false
-      this.$emit("routeChangeStart")
-    },1000
-  );
-    this.$router.beforeEach((to, from, next) => {
-      this.startSpinner();
-      next();
-    });
-
-    this.$router.afterEach(() => {
-      this.stopSpinner();}
-  
-  );}}
-  
+  mounted() {
+    setTimeout(() => {
+      this.showSpinner = false;
+    }, 1000);
+  },
+};
 </script>
-<style src="@/assets/style.css">
 
-</style>
+<style src="@/assets/style.css"></style>

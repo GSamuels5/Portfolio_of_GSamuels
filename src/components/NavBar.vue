@@ -8,22 +8,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto text-white" @mouseover="moveOver">
           <li class="nav-item">
-            <router-link to="/" class="nav-link active" aria-current="page">Home</router-link>
+            <a href="#home" class="nav-link active" aria-current="page">Home</a>
           </li>
           <li class="nav-item">
-            <router-link to="/about" class="nav-link">About</router-link>
+            <a href="#about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <router-link to="/resume" class="nav-link">Education/Experience</router-link>
+            <a href="#resume" class="nav-link">Education/Experience</a>
           </li>
           <li class="nav-item">
-            <router-link to="/projects" class="nav-link" @click="startSpinner">Projects</router-link>
+            <a href="#projects" class="nav-link" @click="startSpinner">Projects</a>
           </li>
           <li class="nav-item">
-            <router-link to="/testimonials" class="nav-link">Testimonials</router-link>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
           </li>
           <li class="nav-item">
-            <router-link to="/contact" class="nav-link">Contact</router-link>
+            <a href="#contact" class="nav-link">Contact</a>
           </li>
 
 
@@ -42,7 +42,7 @@ moveOver(){
 }
   },
   startSpinner() {
-      // Emit an event to start the spinner when a router link is clicked
+      // Emit an event href start the spinner when a router link is clicked
       this.$emit('startSpinner');
     }
 }
