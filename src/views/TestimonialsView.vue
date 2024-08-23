@@ -4,10 +4,12 @@
       <h2 class="display-2">Testimonials</h2>
     </div>
 
-    <div v-if="displayTestimonials" id="carouselExampleAutoplaying" class="carousel slide mt-5 mb-5 " data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div v-for="(testimonial, index) in displayTestimonials" :key="testimonial.id" :class="{ 'carousel-item': true, active: index === 0 }">
-          <div class="row   carry rounded-5 text-black">
+    <!-- <div class="carousel-inner"> -->
+        <div v-if="displayTestimonials" class=" d-flex flex-wrap justify-content-center" >
+          <!-- id="carouselExampleAutoplaying" class="carousel slide mt-5 mb-5 " data-bs-ride="carousel"-->
+        <div v-for="(testimonial) in displayTestimonials" :key="testimonial.id" >
+          <!-- :class="{ 'carousel-item': true, active: index === 0 }" -->
+          <!-- <div class="row   carry rounded-5 text-black">
             <div class="col-lg-4">
               <img :src="testimonial.profile" class="carousel-image d-inline img-fluid " alt="profile" style="height:20rem;width: 30rem;">
             </div>
@@ -19,19 +21,30 @@
                 <p class="card-text text-black mb-4 px-3">{{ testimonial.quotes }}</p>
               </div>
             </div>
-          </div>
+          </div> -->
+          <div class="card" style="width: 20rem;margin-left: 20px; margin-bottom: 20px;">
+  <img :src="testimonial.profile" class="card-img-top" alt="profile">
+  <div class="card-body">
+    <h4 class="card-title text-black text-decoration-underline fs-3">{{ testimonial.position }}
+                </h4>
+                <h5 class="mb-5">{{ testimonial.name }}</h5>
+                <p class="card-text text-black mb-4 px-3">{{ testimonial.quotes }}</p>
+  </div>
+</div>
+
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span> 
-      </button>
+      </button> -->
     </div>
-  </div>
+ 
+  <!-- </div> -->
 </template>
 
 <script>

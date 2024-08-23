@@ -15,7 +15,12 @@
   animation: moveBackground 30s ease-in-out infinite alternate;
   z-index: -1; /* Ensure it is behind other content */
 }
-
+section #home{
+  margin-top: 250px;
+}
+section #about{
+  margin-top: 300px;
+}
 @keyframes moveBackground {
   from {
     transform: translate(0, 0);

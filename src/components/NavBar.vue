@@ -50,7 +50,7 @@ moveOver(){
 </script>
 <style scoped>
 .navbar{
-  /* position: fixed; */
+  position: sticky;
   top: 0; /* Positions it at the top of the page */
   width: 100%; /* Ensures it spans the full width of the page */
   z-index: 1000; 
