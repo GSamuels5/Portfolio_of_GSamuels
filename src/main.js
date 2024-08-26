@@ -7,5 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import './assets/style.css'
+import "jquery"
 
 createApp(App).use(store).use(router).mount('#app')

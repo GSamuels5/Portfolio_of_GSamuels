@@ -4,7 +4,7 @@
     <NavBar />
     <main class="container-fluid">
       <!-- Spinner -->
-      <Spinner v-if="showSpinner" />
+      <!-- <Spinner v-if="showSpinner" /> -->
       
       <!-- Sections -->
       <section id="home">
@@ -38,7 +38,7 @@
 <script>
 import Footer from "./components/Footer.vue";
 import NavBar from "./components/NavBar.vue";
-import Spinner from "./components/Spinner.vue";
+// import Spinner from "./components/Spinner.vue";
 
 // Import all the views
 import HomeView from "./views/HomeView.vue";
@@ -52,7 +52,7 @@ export default {
   components: {
     NavBar,
     Footer,
-    Spinner,
+    // Spinner,
     HomeView,
     AboutView,
     ResumeView,
@@ -76,7 +76,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.showSpinner = false;
-    }, 1000);
+    }, );
   },
 };
 </script>
