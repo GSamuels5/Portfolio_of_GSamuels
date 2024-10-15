@@ -4,7 +4,7 @@
       <h2 class="display-2 mb-2">Reach Me</h2>
       <div class="from col-md-6 ">
         <div class="formation align-content-center text-white bg-transparent  p-4 ">
-          <form action="https://formspree.io/f/mbjnykkk" method="post">
+          <form action="https://formspree.io/f/xaygklql" method="post">
             <div class="mb-3">
               <label for="firstname" class="form-label">First name:</label>
               <input type="text" id="firstname" class="form-control  text-black" placeholder="Enter your name" required>
